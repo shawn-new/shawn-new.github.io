@@ -36,37 +36,37 @@ export const articles: Article[] = [
     content: {
       title: "Article 1: The Engineering Binary",
       scenario: {
-        label: "Scenario: The $100 Million Integration Crisis / 场景：一亿美元的集成危机",
-        english: "Let’s talk about a pattern I’ve seen repeatedly: a global giant hires 50 \"backend\" devs and 20 \"frontend\" devs to build an AI routing system. Two years and $100 million later, the project is a ghost town. Why? Because the technical layers were disconnected from the business reality. The \"Full-Stack\" label has become a distraction. In the AI-Native era, we are seeing a Great Simplification into two roles: Infrastructure Engineers who build the stage, and Product Engineers who perform on it.",
-        chinese: "让我们聊聊一个我反复见到的模式：一家全球巨头聘请了 50 名“后端”开发和 20 名“前端”开发来构建 AI 路由系统。两年后耗资 1 亿美元，项目却成了一座鬼城。为什么？因为技术层级与业务现实完全脱节。“全栈”这个标签已经成了一种干扰。在 AI 原生时代，我们正在经历一场“大简化”，工程师正分化为两类角色：构建舞台的基座工程师，以及在舞台上表演的产品工程师。"
+        label: "Scenario: When 70 Engineers Can’t Ship a Feature / 场景：70 个工程师做不出一个功能",
+        english: "Here’s a pattern I keep seeing inside large companies. A Fortune-100 firm decides to build an internal AI assistant for routing customer requests. They staff it the way they’ve always staffed things: 50 backend engineers, 20 frontend engineers, a platform team, three layers of management. Two years and roughly $100M of fully loaded cost later, the system has been quietly shelved. Nobody owned the user problem end-to-end; each layer shipped its components on time, and the components never composed into a product. The \"full-stack engineer\" label was supposed to fix this, but it ended up as a job title rather than a way of working. What’s actually emerging in AI-native teams is a sharper split into two roles: infrastructure engineers, who build the platform, and product engineers, who build the thing customers touch.",
+        chinese: "我反复见到这样一个模式。一家世界 100 强公司决定做一个内部 AI 助手，用来自动分发客户请求。他们按一贯的方式配人：50 名后端、20 名前端、一个平台团队、三层管理。两年和约 1 亿美元的综合成本之后，这个系统被悄悄下线了。没有人端到端地对用户问题负责；每一层都按时交付了自己的组件，而这些组件从来没有拼成一个产品。“全栈工程师”这个标签本来是用来解决这个问题的，结果它只是变成了一种职位名称，而不是一种工作方式。AI 原生团队里真正在浮现的，是另一种更清晰的分工：构建平台的基座工程师，以及构建用户能直接触达的产品的产品工程师。"
       },
       points: {
         label: "The Core Evolution / 核心演变",
         items: [
           {
-            titleEn: "1. The Death of the Implementation Layer",
-            titleZh: "1. 实现层的消亡与产品工程师的所有权",
-            english: "Think about the old way: you spent 60% of your time writing boilerplate and managing states. Today, AI tools like Cursor or Vercel have turned implementation into a commodity. This allows the Product Engineer to move \"up-stack.\" Their scope is no longer defined by a language, but by a business outcome. Look at Instagram in 2012—they supported 30 million users with only 13 employees. That wasn't a fluke; it was a precursor. By letting Infrastructure (AWS) handle the \"how,\" those 13 people could focus entirely on the \"what.\" This is the new standard: the engineer as a mini-CEO who owns the user problem from UI to deployment.",
-            chinese: "想想过去的方式：你 60% 的时间都在编写模板代码和管理状态。今天，Cursor 或 Vercel 等 AI 工具已将“实现”变成了一种大宗商品。这使得产品工程师能够向“栈顶”移动。他们的职责不再由某种语言定义，而是由业务结果定义。看看 2012 年的 Instagram——他们仅凭 13 名员工就支撑了 3000 万用户。那不是偶然，而是一个先兆。通过让基座（AWS）处理“如何实现”，这 13 个人可以完全专注于“实现什么”。这就是新标准：工程师变成了微型 CEO，拥有从 UI 到部署的整个用户问题。"
+            titleEn: "1. The Implementation Layer Is Collapsing",
+            titleZh: "1. 实现层正在塌缩",
+            english: "For the past twenty years, most engineering work has really been implementation: turning a clear spec into working code. CRUD endpoints, form state, build configs, wiring services together. Tools like Cursor, Claude Code, and v0 don’t make that work disappear, but they compress it dramatically — a sprint of UI work becomes an afternoon, a fresh service scaffold becomes a single prompt. The compression frees product engineers to move up the stack. Their unit of work stops being a Jira ticket and starts being a user outcome. Instagram at acquisition (13 employees serving 30 million users in 2012) used to be the example people pointed to when they talked about leverage. AWS abstracted away the \"how\" of infrastructure so a tiny team could obsess over the \"what.\" AI is now doing the same thing for application code itself — and the engineers who own a problem from interface to deploy are the ones whose leverage compounds.",
+            chinese: "过去二十年里，大多数工程工作其实是“实现”：把一份清晰的需求翻译成可运行的代码。CRUD 接口、表单状态、构建配置、把几个服务接起来。Cursor、Claude Code、v0 这类工具并没有让这些工作消失，但把它们大幅压缩了——原本一个迭代周期才能做完的 UI 工作，现在一个下午就能搞定；一个完整的新服务脚手架，一句 prompt 就能拉起来。这种压缩把产品工程师从实现里解放出来，让他们往栈上走：工作单位不再是一张工单，而是一个用户结果。2012 年 Instagram 被收购时只有 13 个人却服务着 3000 万用户——这件事过去常被当作“杠杆”的典型例子。当年是 AWS 把“基础设施怎么搭”这件事抽象掉了，小团队才能死磕“要做什么”。AI 现在正对应用代码本身做同样的事，而那些能从界面一路负责到部署的工程师，会不断把这种杠杆叠加起来。"
           },
           {
-            titleEn: "2. Infrastructure: The Providers of Invariants",
-            titleZh: "2. 基座：不变式的供给者",
-            english: "If everyone is building products, who ensures the world keeps spinning? This is the domain of Infrastructure Engineers. They don't solve specific use cases; they build the \"Invariants\"—the high-performance, secure abstractions like Snowflake or Stripe. The barrier to entry here is rising exponentially. You’re either building the world’s most scalable platform or you’re a customer of one. This is about deep technical rigor. If you aren't providing the \"Solution\" that 10,000 other companies use as their foundation, you aren't doing Infra; you're just doing expensive plumbing.",
-            chinese: "如果每个人都在构建产品，谁来确保世界继续运转？这就是基座工程师的领域。他们不解决具体的用例，他们构建“不变式”——即像 Snowflake 或 Stripe 这样高性能、安全的底层抽象。这里的准入门槛正在呈指数级提高。你要么在构建全球最具扩展性的平台，要么就是它的客户。这关乎深层的技术严谨性。如果你不是在提供那 10,000 家公司赖以生存的“方案”，那你不是在做基座，你只是在做昂贵的修修补补。"
+            titleEn: "2. Infrastructure: Selling Guarantees, Not Code",
+            titleZh: "2. 基座：卖的是保证，不是代码",
+            english: "If product engineers are moving up the stack, who owns the foundation? That’s the infrastructure engineer’s job, and it looks less like writing code and more like designing guarantees. Snowflake doesn’t sell you a database; it sells you the guarantee that your warehouse will scale without you thinking about it. Stripe doesn’t sell you payment code; it sells you the guarantee that money will move correctly across 135+ currencies and a hundred regulators. The bar for this work is rising fast. The things worth building at the infrastructure layer are the ones that ten thousand other companies will compose against. If your platform only serves your own product team, you’re not building infrastructure — you’re building plumbing, and AI will write that plumbing for twenty dollars a month. Real infra means owning a primitive that other people’s products depend on.",
+            chinese: "如果产品工程师都在向上走，那谁来做下面的地基？这是基座工程师的工作，而它看起来越来越不像“写代码”，更像“设计保证”。Snowflake 卖的不是一个数据库，它卖的是“你的仓库会自动扩展，你不用操心”这个保证。Stripe 卖的不是支付代码，它卖的是“钱会在 135 种以上的货币、上百个监管方之间正确流动”这个保证。这一层的门槛在快速抬高。值得在基座层做的东西，是那些会被一万家公司拿去拼接的东西。如果你的平台只服务自家产品团队，那你做的不是基座，是“管道”——而管道这种活，AI 一个月二十美金就能写。真正的基座，是你拥有了一个别人的产品离不开的原语。"
           },
           {
-            titleEn: "3. FDE: Ownership as the Ultimate Moat",
-            titleZh: "3. FDE：作为终极护城河的所有权",
-            english: "Then we have the Forward Deployed Engineer (FDE), a role pioneered by Palantir that perfectly bridges these two worlds. Here is the crucial distinction: A consultant at McKinsey delivers a PDF and a bill. An FDE delivers a working system and stays to ensure it creates ROI. Because they bring the \"Infra\" of a company like Palantir directly into the client's messy reality, they own the outcome. Palantir’s revenue per employee is massively higher than traditional firms because FDEs don't sell \"hours\"; they sell \"product-led solutions.\" In a world where AI can give advice, the human who can actually own the delivery becomes the most valuable asset.",
-            chinese: "接着是前线部署工程师 (FDE)，这是由 Palantir 开创的、完美连接这两个世界的角色。这里有一个至关重要的区别：麦肯锡的顾问交付的是 PDF 和账单；而 FDE 交付的是一套运行的系统，并留下来确保它产生 ROI。因为他们将 Palantir 这样的公司的“基座”直接带入客户混乱的现实中，他们拥有最终结果。Palantir 的人均营收远高于传统公司，因为 FDE 不卖“工时”，他们卖的是“产品驱动的方案”。在一个 AI 遍地提供建议的世界里，那个能真正对交付“负责”的人才是最宝贵的资产。"
+            titleEn: "3. The FDE: When Delivery Itself Becomes the Moat",
+            titleZh: "3. FDE：当“交付”本身变成护城河",
+            english: "There’s a third role bridging these two worlds: the Forward Deployed Engineer, the model Palantir built its business on. The cleanest way to see it is to put it next to traditional consulting. A McKinsey engagement ends with a deck and an invoice. An FDE engagement ends with a system running in your environment, integrated against your messy data, with someone on the hook for whether it actually moves a number. Palantir’s revenue per employee runs in the high six figures — multiples above traditional consulting — because FDEs aren’t billing hours. They’re embedding a productized platform into a specific customer reality and owning the outcome. As LLMs get cheaper, advice gets cheaper with them: any executive can get a competent strategy memo for free. What stays expensive is the person who can walk into a Fortune 500’s data swamp and have something working in production by Monday.",
+            chinese: "还有第三种角色，把上面两个世界连起来——前线部署工程师 (FDE)，Palantir 把整个商业模式建在这上面。最清晰的看法是把它和传统咨询放在一起对比。麦肯锡的项目以一份 deck 和一张账单结束。FDE 的项目以一套真正跑在你环境里的系统结束——它接到你那一团乱麻的数据上，并且有人在背后为“这东西是否真的能撬动一个数字”负责。Palantir 的人均营收在高六位数美元，是传统咨询的好几倍，因为 FDE 不卖工时，而是把一个产品化的平台嵌进特定客户的现实里，并对结果负责。LLM 越便宜，“给建议”这件事就越便宜：任何高管都能免费拿到一份还不错的战略备忘录。还在涨价的，是那个能走进世界 500 强一团乱麻的数据沼泽，并且周一就能让东西在生产环境里跑起来的人。"
           }
         ]
       },
       conclusion: {
-        label: "Conclusion: Choose Your Side / 总结：选择你的阵营",
-        english: "The \"middle-ground\" dev is a dying breed. In the next five years, the reporting chains will shorten, and the scope for each individual will explode. You have two paths: either master the deep, architectural invariants of Infrastructure, or master the broad, business-driven ownership of Product. Both have a massive moat; the only danger is staying in the middle.",
-        chinese: "“中间地带”的开发者正在消亡。在未来五年内，汇报链条将缩短，每个人的职能范围将爆炸式增长。你有两条路：要么精通基座深层的架构不变式，要么精通产品广泛的业务所有权。两者都有极深的护城河；唯一的危险是留在中间。"
+        label: "Conclusion: The Barbell, Not the Middle / 总结：杠铃两端，不要中间",
+        english: "The middle of the stack is hollowing out. Over the next five years, reporting chains will compress and the scope of any individual who can hold the full loop in their head will expand. Two paths look durable. Go deep on the architectural primitives that platforms are built from, or go wide on the product loop from user problem to shipped feature. Both have real moats. The dangerous place to stand is the middle — the engineer whose job is mostly translating a spec into code, because that’s exactly the layer AI is automating away.",
+        chinese: "栈的中间正在被掏空。未来五年里，汇报链会进一步压扁，而那些能把整个闭环装在脑子里的个体，能管的事会被极大放大。两条路看起来都站得住。要么往深处走，去做平台所依赖的那些架构原语；要么往宽处走，去对从用户问题到上线功能的整个产品闭环负责。这两条路都有真实的护城河。真正危险的位置是中间——那些主要工作是把需求文档翻译成代码的工程师，因为这一层恰恰是 AI 正在自动化掉的那一层。"
       }
     }
   },
@@ -77,37 +77,37 @@ export const articles: Article[] = [
     content: {
       title: "Article 2: The SaaS Endgame",
       scenario: {
-        label: "Scenario: The \"Silent\" Seat / 场景：沉默的账号",
-        english: "Here is a nightmare for any SaaS CEO: A Fortune 500 client deploys a custom AI assistant, and suddenly 40% of their Salesforce licenses are only logged into once a month. The work is being done by AI, yet the bill is still tied to human headcount. The client calls to cancel. This is the \"SaaS Doom\"—a world where your product's efficiency directly cannibalizes your revenue. If you charge per \"seat,\" you are effectively taxing your customer for being productive.",
-        chinese: "对任何 SaaS CEO 来说，这都是一场噩梦：一位世界 500 强的客户部署了定制 AI 助手，突然间他们 40% 的 Salesforce 账号每月仅登录一次。工作已由 AI 完成，但账单仍挂钩在人头数上。客户打电话要求取消。这就是“SaaS 末日”——在这种现实下，你产品的效率会直接蚕食你的收入。如果你按“人头”收费，你实际上是在对客户的“高效率”征税。"
+        label: "Scenario: The Quiet License / 场景：越来越安静的账号",
+        english: "Here’s the conversation no SaaS CRO wants to have. A Fortune 500 customer rolls out an in-house AI agent on top of your platform. Three months later, 40% of their seats are logging in once a month — not because employees quit, but because the agent is doing the work. At renewal, they ask for a 40% cut in seat count. The work didn’t go away; it just stopped flowing through humans. This is the structural problem with seat-based pricing in an AI world. Your bill is anchored to headcount, but the value your software produces has decoupled from headcount. Every efficiency gain your customer extracts shows up as a churn risk on your side.",
+        chinese: "这是任何一家 SaaS 公司 CRO 都不想接的电话。一家世界 500 强客户在你的平台之上接入了一个内部 AI 智能体。三个月后，他们 40% 的账号每月只登录一次——不是因为员工离职，而是因为智能体在替他们干活。续约时客户打来电话，要求把账号数砍掉 40%。活儿没消失，只是不再经过人手了。这就是按账号收费 (per-seat) 在 AI 时代的结构性问题。你的账单锚定在人头数上，但软件创造的价值已经和人头数脱钩。客户每挤出一份效率，对你来说就是一份流失风险。"
       },
       points: {
         label: "The Value Shift / 价值转移",
         items: [
           {
-            titleEn: "1. The Death of the \"Per-Seat\" Tax",
-            titleZh: "1. “按人头收费”税的消亡",
-            english: "For decades, SaaS was a numbers game: hire more people, buy more seats. But AI has fundamentally decoupled headcount from value. If a single AI agent can process 1,000 support tickets, why pay for a 10-person support team? The seat-based model has turned into a direct conflict of interest. The customer wants automation; the vendor wants more \"logins\" to grow. This is why we are seeing a mass exodus toward Usage-Based Billing (UBB). It is the only way to capture the value of AI tokens and compute. When growth in legacy \"Sales Cloud\" segments stagnates, it’s not because the tool isn't used—it's because the \"seat\" is no longer the unit of value.",
-            chinese: "几十年来，SaaS 一直是一场数字游戏：雇的人越多，买的账号就越多。但 AI 已经从根本上将人头数与价值脱钩了。如果一个 AI 智能体可以处理 1,000 个工单，为什么要为一个 10 人的客服团队买单？“按头收费”模式现在已变成一种直接的利益冲突：客户想要自动化，供应商想要更多的“登录数”来增长。这就是为什么我们看到大量公司转向按量付费 (UBB)。这是捕获 AI Token 和算力价值的唯一途径。当传统“销售云”业务增长陷入停滞，并不是因为工具没用了，而是因为“人头”不再是价值单位。"
+            titleEn: "1. Seat-Based Pricing Has Become a Conflict of Interest",
+            titleZh: "1. 按账号收费已经变成利益冲突",
+            english: "For two decades, seat pricing was a clean proxy for value: more users meant more workflows, which meant more business. AI breaks the proxy. When one agent resolves a thousand support tickets a day, the headcount that used to justify the seat count just isn’t there. Worse, vendor and customer are now pulling in opposite directions: the customer wants every workflow automated; the vendor needs every workflow to keep flowing through a logged-in human. That tension is why incumbents are migrating to usage-based billing — pricing by tokens consumed, transactions processed, agent runs executed, or any unit that scales with the work AI is actually doing. When growth in legacy \"sales cloud\" line items stalls, it usually isn’t a usage problem. The product is being used. The seat just stopped being the unit of value.",
+            chinese: "过去二十年里，按账号收费是衡量价值的一个还算靠谱的替代指标：用户越多，意味着工作流越多，业务量越大。AI 把这个替代关系破坏掉了。当一个智能体一天就能解决一千张工单，过去用来撑起账号数的那批岗位本来就没了。更糟的是，供应商和客户开始往相反方向用力：客户想把每一个工作流都自动化；供应商需要每一个工作流都还经由一个登录态的真人。这就是为什么一批老牌厂商在转向按量付费 (UBB) ——按消耗的 token、处理的交易、跑过的智能体次数来定价，总之换成一个能跟着 AI 实际干的活儿一起扩张的单位。当传统“销售云”这类业务增长停滞时，通常并不是因为客户不用了。产品依然在被使用，只是“账号”不再是价值的计量单位。"
           },
           {
-            titleEn: "2. SAP’s Pivot: Trading Licenses for Transactions",
-            titleZh: "2. SAP 的转型：以许可换交易",
-            english: "Take SAP, the ultimate titan of legacy licenses. They are currently navigating a painful transition from \"On-Premise Licenses\" to \"Cloud Consumption.\" This isn't just a tech swap; it’s a philosophical shift. Their new \"Full Usage Equivalent\" (FUE) and consumption-based models for the Business Technology Platform (BTP) represent a move away from \"owning software\" to \"consuming business outcomes.\" SAP realized that if their software automates the logic, they must charge for the \"transaction\" rather than the \"access.\" This is the mandatory pivot for any firm with a high GPU-to-human ratio.",
-            chinese: "看看 SAP，这个传统许可模式的终极巨人。他们正处于从“本地许可”转向“云消费”的痛苦转型中。这不仅仅是技术的更换，更是一种哲学的转变。他们新的“全使用当量 (FUE)”以及针对 BTP 平台的消耗计费模式，代表了从“拥有软件”到“消耗业务结果”的转变。SAP 意识到，如果他们的软件自动化了逻辑，他们就必须针对“交易”而非“权限”来计费。对于任何 GPU 占比远高于人力的公司来说，这是强制性的转身。"
+            titleEn: "2. SAP’s RISE: Trading Licenses for Consumption",
+            titleZh: "2. SAP 的 RISE：用许可换消耗",
+            english: "SAP, the textbook giant of perpetual licenses, is in the middle of a hard pivot from on-prem licensing to consumption. RISE with SAP and the Business Technology Platform (BTP) are the vehicles. The interesting mechanic is BTP’s consumption model and its Full Use Equivalent (FUE) unit, which collapses dozens of distinct consumption metrics — API calls, runtime hours, AI inference, integration messages — into a single normalized unit a CFO can budget against. The shift in worldview is bigger than the pricing change: customers stop paying for the right to access software and start paying for outcomes the software produces on their behalf. For any vendor whose roadmap involves AI doing more of the work, this isn’t optional. If your software automates the logic, you have to charge for the transaction, not the access — otherwise the value you create lands on someone else’s P&L.",
+            chinese: "SAP 这种永久授权时代的教科书级巨头，正处在一次很痛的转型之中——从本地部署许可转向消耗模式。承载这次转型的是 RISE with SAP 和 Business Technology Platform (BTP)。其中比较有意思的机制是 BTP 的消耗计费模式，以及它的“全使用当量 (Full Use Equivalent, FUE)”单位：把几十种各不相同的消耗指标——API 调用、运行时时长、AI 推理、集成消息——折算成一个 CFO 能拿来做预算的统一单位。世界观上的变化比定价变化大：客户从“为访问软件的权利付费”，变成“为软件代为产出的结果付费”。对任何把 AI 越来越多地纳入路线图的厂商来说，这不是可选项。如果你的软件已经把业务逻辑自动化了，你就必须按“交易”而不是按“访问”收费——否则你创造的价值会落在别人的损益表上。"
           },
           {
-            titleEn: "3. The Psychology of the \"Bill Shock\"",
-            titleZh: "3. 缓解“账单刺客”的心理学",
-            english: "The biggest obstacle to UBB is \"Bill Shock.\" If an employee thinks every click costs $5, they stop clicking. Successful firms like Snowflake have cracked this code by offering Prepaid Credits and Departmental Budgets. Snowflake's Net Revenue Retention (NRR) of over 130% is the smoking gun: it proves that when billing is transparent and tied to ROI, clients scale naturally. By allowing managers to set a hard cap per department, companies can treat AI consumption like a utility—reliable, measurable, and safe from unexpected spikes.",
-            chinese: "按量付费 (UBB) 的最大障碍是“账单刺客”。如果一名员工觉得每次点击都要花 5 美元，他就会停止点击。像 Snowflake 这样成功的公司已经破解了这个难题，他们提供预付费积分和部门用量预算。Snowflake 超过 130% 的净收入留存率 (NRR) 就是最有力的证据：它证明了当计费透明且与 ROI 挂钩时，客户会自然地扩大规模。通过允许经理为每个部门设置硬上限，公司可以像管理公用事业（如水电费）一样管理 AI 消耗——可靠、可衡量，且无惧意外的激增。"
+            titleEn: "3. Solving the Bill-Shock Problem",
+            titleZh: "3. 解决“账单焦虑”问题",
+            english: "The biggest objection to usage-based billing isn’t philosophical, it’s psychological. If every action feels like it costs five dollars, employees stop taking actions and adoption craters. Snowflake cracked this early with prepaid credits, per-team consumption budgets, and a console where any engineer can see what their query just cost. The result is consumption that stays voluntary and predictable — and Snowflake’s net revenue retention has consistently sat well above 130%, the strongest signal you’ll find that customers expand because the bill makes sense, not in spite of it. The lesson generalizes: hard caps per team, departmental quotas, query- or agent-level cost telemetry, and prepaid commits with a soft floor make AI consumption feel like a utility — metered, transparent, governable. Skip these controls and even a great usage-based product gets killed by the first quarter-end invoice nobody saw coming.",
+            chinese: "按量付费最大的反对声不是哲学层面的，而是心理层面的。如果每一次操作都让人觉得在花五美金，员工就不再点了，使用率会立刻塌掉。Snowflake 很早就破解了这一点：预付费积分、按团队的消耗预算，再加上一个让任何工程师都能看到“刚才那条查询花了多少钱”的控制台。结果是消耗变得自发又可预测——Snowflake 的净收入留存率长期稳定在 130% 以上，这是“客户因为账单合理而扩张、而不是不顾账单地扩张”的最强信号。这个经验是可以推广的：按团队的硬上限、部门配额、每条查询或每次智能体调用的成本观测、加上带最低消耗的预付费承诺，能让 AI 消耗体验像一种公用事业——计量、透明、可治理。跳过这些控制，再好的按量付费产品也会被第一份没人预见到的季末账单干掉。"
           }
         ]
       },
       conclusion: {
-        label: "Conclusion: Value over Volume / 总结：价值胜过数量",
-        english: "We are moving into an age where software becomes a \"Business Partner\" rather than just a tool. The next generation of SaaS will share the risks and rewards of the AI’s actual performance. For the user, the focus shifts from \"How many people have access?\" to \"How much business value was generated?\" If your billing model doesn't reflect that, you are already obsolete.",
-        chinese: "我们正进入一个软件不再仅仅是工具，而是成为“业务伙伴”的时代。下一代 SaaS 将分享 AI 实际表现的风险和收益。对于用户来说，重点从“有多少人有权限？”转向“产生了多少业务价值？”。如果你的计费模式不能反映这一点，你已经过时了。"
+        label: "Conclusion: Value over Volume / 总结：价值高于数量",
+        english: "The next generation of SaaS won’t sell you access; it will sell you outcomes, and it will share both the upside and the risk of what the AI actually delivers. The buyer’s question is shifting from \"how many people have access?\" to \"how much business value did this generate?\" That reframing has implications all the way down — into how you instrument your product, how you write your contracts, how you forecast revenue, how you plan your roadmap. Vendors whose pricing still answers the old question are already on the wrong side of the curve.",
+        chinese: "下一代 SaaS 卖的不再是“访问权”，而是“结果”，并且会和客户一起分享 AI 实际产出的收益与风险。买方的问题正从“多少人有权限？”变成“它产生了多少业务价值？”。这种重新定义会一路向下渗透——影响你怎么对产品做埋点、怎么签合同、怎么做收入预测、怎么写路线图。那些定价还停留在回答“老问题”的厂商，已经站在了曲线错的那一边。"
       }
     }
   },
@@ -118,37 +118,37 @@ export const articles: Article[] = [
     content: {
       title: "Article 3: The AI Native Moat",
       scenario: {
-        label: "Scenario: The 48-Hour \"Sherlock\" / 场景：48 小时“夏洛克”危机",
-        english: "Here is a reality check: a startup launches a slick GPT-powered tool for legal summaries, and 48 hours later, OpenAI releases \"Custom GPTs\" for free. The startup’s value instantly evaporates. This is the \"Sherlock\" effect—if your product is just a wrapper around generic logic, you don't have a moat; you have a countdown timer. In the AI-Native era, to survive, you must own at least one of the three pillars that AI cannot recreate: Unique Data, Unique Insight, or Unique Workflows.",
-        chinese: "认清现实吧：一家初创公司推出了基于 GPT 的精美法律摘要工具，48 小时后，OpenAI 免费发布了“Custom GPTs”。初创公司的价值瞬间蒸发。这就是“夏洛克效应”——如果你的产品只是包裹在通用逻辑上的一个“套壳”，你拥有的不是护城河，而是一个倒计时器。在 AI 原生时代，要生存下去，你必须至少拥有 AI 无法重造的三大支柱之一：独特的数据、独特的洞察或独特的工作流。"
+        label: "Scenario: Sherlocked in 48 Hours / 场景：48 小时被“收编”",
+        english: "Here’s a story everyone in AI-native product knows by now. A startup launches a polished GPT-powered tool for legal summarization. Forty-eight hours later, OpenAI ships Custom GPTs and a competitive feature lands inside ChatGPT itself, free. The startup’s wedge collapses overnight. This is the modern version of being \"Sherlocked\" — the term comes from Apple bundling features that crushed third-party tools — and it’s the default outcome for any product that’s a thin wrapper over a foundation model. If your differentiation can be reproduced by a prompt and a few weeks of platform work from the model lab itself, you don’t have a moat; you have a countdown timer. To survive the AI-native era, you have to own at least one of three things the model can’t recreate from public data: unique data, unique insight, or unique workflows.",
+        chinese: "AI 原生产品圈里现在每个人都熟悉这个故事。一家初创公司发布了一个做得相当精致的、基于 GPT 的法律摘要工具。48 小时后，OpenAI 发布 Custom GPTs，与之竞争的能力直接进入 ChatGPT，而且免费。这家初创公司的差异化优势一夜之间崩塌。这是“被 Sherlock”的现代版本——这个词来自苹果当年通过捆绑功能把第三方工具碾压掉的历史——也是任何只在基础模型外面薄薄包一层的产品的默认结局。如果你的差异化可以被一句 prompt，加上模型实验室自己几周的平台工程复制出来，你拥有的不是护城河，而是一个倒计时。要在 AI 原生时代活下来，你必须至少拥有模型无法从公开数据中重造的三样东西之一：独特的数据、独特的洞察、或独特的工作流。"
       },
       points: {
         label: "The Three Pillars / 三大支柱",
         items: [
           {
-            titleEn: "1. Unique Data: The Sovereignty of Ground Truth",
-            titleZh: "1. 独特数据：事实主权的堡垒",
-            english: "If AI is the engine, unique data is the fuel. Companies like American Express (AXP), J.P. Morgan (JPM), or Disney aren't worried about being \"Sherlocked.\" Why? Because they sit on mountains of historical, first-party data that isn't on the public internet. A general LLM can't \"hallucinate\" AXP’s trillions of transaction points or Disney’s decades of private creative logic. This \"Sovereignty\" over ground truth means their AI models are inherently more accurate and valuable than any general model. Without unique data, you are fighting a losing war against commodity software.",
-            chinese: "如果 AI 是引擎，那么独特的数据就是燃料。像美国运通 (AXP)、摩根大通 (JPM) 或迪士尼这样的公司并不担心被“夏洛克”。为什么？因为他们坐拥海量的历史第一手数据，这些数据并不存在于公开网络中。通用大模型无法“幻觉”出美国运通数万亿次的交易数据点，也无法“幻觉”出迪士尼数十年的私有创意逻辑。这种对“事实”的主权意味着他们的 AI 模型天生就比任何通用模型更准确、更有价值所。没有独特的数据，你就是在打一场针对大宗商品化软件的“注定失败”的战争。"
+            titleEn: "1. Unique Data: Sovereignty over Ground Truth",
+            titleZh: "1. 独特数据：对“事实”的主权",
+            english: "If models are the engine, proprietary data is the fuel that doesn’t sit in their training set. American Express, JPMorgan, and Disney aren’t worried about being Sherlocked. They sit on decades of first-party data — transaction histories, underwriting outcomes, internal creative archives — that has never been public and never will be. A general LLM can describe what credit card transactions look like in aggregate, but it cannot reason over Amex’s actual transaction graph, because it has never seen it. That asymmetry — sovereignty over the ground truth in your domain — is what makes a fine-tuned or retrieval-grounded model on top of proprietary data structurally more accurate than any frontier model alone. If your business doesn’t generate or accumulate proprietary data, the AI layer of your product is competing with a commodity, and you’re going to lose on price.",
+            chinese: "如果说模型是引擎，那么不在它训练集里的私有数据就是燃料。美国运通、摩根大通、迪士尼这样的公司并不担心被 Sherlock。他们坐拥数十年的第一手数据——交易记录、核保结果、内部创作档案——这些数据从未公开，也不会公开。通用大模型可以描述“信用卡交易在聚合层面长什么样”，但它没法在运通真实的交易图上做推理，因为它从来没见过。这种不对称——你对自身领域“事实”的主权——正是为什么基于专有数据做微调或检索增强的模型，会在结构上比单独的前沿模型更准确。如果你的业务本身不产生或沉淀专有数据，那你产品里的 AI 层就是在跟大宗商品竞争，你会在价格上输掉。"
           },
           {
-            titleEn: "2. Unique Insight: Beyond Pattern Recognition",
-            titleZh: "2. 独特洞察：超越模式识别",
-            english: "But data alone is just noise. The real moat is Unique Insight—the proprietary understanding of what that data means. Think about a veteran hedge fund: they don't just have market data; they have a unique insight into how geopolitical events correlate with specific supply chain shifts. AI can imitate logic, but it cannot simulate decades of domain expertise and edge-case intuition. Take Palantir’s \"Ontology\" as a specimen—it's not just a database; it’s a living map of unique business insights that guides the AI to solve real-world problems. Insight is the compass that keeps your AI from getting lost in generalities.",
-            chinese: "但数据本身只是噪音。真正的护城河是独特洞察——即对数据“意味着什么”的独家理解。想想一家资深的对冲基金：他们拥有的不仅是市场数据，还有关于地缘政治事件如何与特定供应链变化关联的独特洞察。AI 可以模仿逻辑，但它无法模拟数十年的领域经验和对边缘情况的直觉。看看 Palantir 的“本体 (Ontology)”——它不仅仅是一个数据库，它是指引 AI 解决现实问题的、关于业务洞察的活地图。洞察是让你的 AI 不在平庸的通用性中迷失方向的指南针。"
+            titleEn: "2. Unique Insight: What the Data Actually Means",
+            titleZh: "2. 独特洞察：数据“意味着什么”",
+            english: "Data alone is just inventory. The harder moat is unique insight — the proprietary understanding of what the data actually means in context. A veteran macro hedge fund doesn’t just have market data (everyone has market data). It has a hard-won model of how a specific geopolitical event ripples through specific supply chains and shows up in specific instruments three weeks later. AI can mimic the surface logic, but it can’t reproduce two decades of edge-case intuition or the negative results that taught the firm what doesn’t matter. Palantir’s Ontology is the productized version of this idea: it’s not a database, it’s a structured map of how a customer’s entities, relationships, and operating logic actually behave, and it’s what lets an LLM reason in that customer’s terms instead of in generic ones. Insight is what stops a smart model from confidently solving the wrong problem.",
+            chinese: "数据本身只是库存。更难复制的护城河是独特洞察——你对“数据在上下文里到底意味着什么”的独家理解。一家做宏观的资深对冲基金不只是有市场数据（市场数据谁都有），它还有一套来之不易的模型：某个特定的地缘政治事件，会沿着哪些特定的供应链传导，并在三周后出现在哪些特定的金融工具上。AI 可以模仿表层逻辑，但它无法重造二十年的边缘情况直觉，也无法重造那些“教会公司什么是不重要的”负面结果。Palantir 的 Ontology 是这个想法的产品化版本：它不是一个数据库，而是一张结构化的地图，刻画了客户的实体、关系、运营逻辑实际上是怎么运转的——也正是这套东西让 LLM 能用客户自己的语言去推理，而不是用通用语言。洞察是阻止一个聪明模型自信地解决错误问题的东西。"
           },
           {
             titleEn: "3. Unique Workflows: The Architecture of Delivery",
             titleZh: "3. 独特工作流：价值交付的架构",
-            english: "This is where the \"Platform\" comes to life. A Unique Workflow is the architecture that turns data and insight into delivered value. This is why companies like Databricks win. They provide the \"Invariants\"—the specific, complex sequences of actions that make data usable for a specific industry. Once a value-delivery workflow is established, the switching cost is existential. Look at Midjourney: a team of only 11 people generating $200 million in revenue. They achieved this because they optimized the creative workflow to an extreme degree. They didn't build a better \"engine\"; they built a better \"way to use the engine.\"",
-            chinese: "这就是“平台”焕发生命力的地方。独特工作流是将数据和洞察转化为交付价值的架构。这就是为什么像 Databricks 这样的公司能赢。他们提供“不变式”——即让数据在特定行业中变得可用的、特定的、复杂的动作序列。一旦一个价值交付工作流被建立，切换成本就是毁灭性的。看看 Midjourney：一个仅有 11 人的团队创造了 2 亿美元的年收入。他们能做到这一点，是因为他们将创意工作流优化到了极致。他们并没有构建一个更好的“引擎”，而是构建了一个更好的“使用引擎的方式”。"
+            english: "This is where the platform comes alive. A unique workflow is the specific architecture that turns data and insight into value the customer actually consumes — the sequence of ingestion, modeling, governance, review, and delivery that lets the system be trusted in production. Databricks is the obvious example: their stack wins because the workflow from raw data to governed, AI-ready features is genuinely opinionated and hard to assemble out of separate components. Once a workflow becomes load-bearing inside a customer, the switching cost is existential, not financial. The other end of the spectrum is Midjourney, reportedly run by a team of around a dozen people while generating roughly $200M in revenue at peak. They didn’t build a better diffusion model than the open-source labs; they built a better way to use one — the prompt loop, the gallery, the community, the iteration speed — and the workflow itself became the product.",
+            chinese: "这是“平台”真正活起来的地方。独特工作流，是把数据和洞察转化为客户实际消耗的价值的那条具体路径——从采集、建模、治理、复核到交付的一整套动作序列，正是它让系统在生产环境里值得被信任。Databricks 是个明显例子：他们的栈之所以赢，是因为从原始数据到“被治理过、能直接喂给 AI 的特征”这条工作流，是真正有主张的、不容易用别的组件拼出来的。一旦一个工作流在客户内部变成承重墙，切换成本就不再是钱的问题，而是生死问题。光谱的另一端是 Midjourney，据报道在峰值时只由大约十来个人运营，却做出了约 2 亿美元的收入。他们并没有比开源实验室做出更好的 diffusion 模型；他们做出的是“更好地使用 diffusion 模型的方式”——prompt 循环、画廊、社区、迭代速度——工作流本身就是产品。"
           }
         ]
       },
       conclusion: {
-        label: "Conclusion: The Great Organizational Collapse / 总结：组织的伟大坍缩",
-        english: "In the AI-Native era, we will see two poles: the \"Sovereigns\" who own the data and the \"Architects\" who own the platform. This echoes my earlier binary of Product vs. Infra. The middle layers—the middle managers and the \"data movers\"—will evaporate. This leads us to the rise of the 1-Person Unicorn. When a single individual leverages AI to manage these three pillars, they can achieve what a 100-person startup used to. The goal isn't to manage people; it's to manage a \"Trinity\" of AI agents that solve massive problems.",
-        chinese: "在 AI 原生时代，我们将看到两极：拥有数据的“主权者”和拥有平台的“建筑师”。这呼应了我之前提到的“产品与基座”的二元论。中间层——那些中层管理者和“数据搬运工”——将会蒸发。这引领我们走向 1 人独角兽的崛起。当一个人利用 AI 来管理这三大支柱时，他们就能实现过去 100 人的初创公司才能做到的事情。目标不再是管理人，而是管理一个执行“三位一体”支柱、解决海量问题的 AI 智能体阵营。"
+        label: "Conclusion: The Org Chart Hollows Out / 总结：组织结构的塌陷",
+        english: "In the AI-native era, two poles of value keep accumulating: the sovereigns who own the data and the architects who own the platform workflows. That mirrors the product-vs-infrastructure split from the first essay. The middle layers — middle managers and the data-mover roles whose job is to shuttle artifacts between the poles — get compressed first. That compression is what makes the much-discussed \"one-person unicorn\" even plausible. When a single operator can wield AI agents that simultaneously sit on top of proprietary data, encoded insight, and a productized workflow, they can credibly run the equivalent of what used to take a hundred-person company. The job stops being managing people. It becomes orchestrating a small constellation of AI agents that operate across all three pillars at once.",
+        chinese: "在 AI 原生时代，两极的价值会持续累积：拥有数据的“主权者”和拥有平台工作流的“建筑师”。这正好呼应了第一篇里“产品 vs 基座”的分化。中间层——中层经理，以及那些负责在两极之间搬运产物的“数据搬运工”——会最先被压缩掉。这种压缩正是“1 人独角兽”这个被反复讨论的概念能够立得住的原因。当一个个体能同时调动持有专有数据、内化洞察、产品化工作流的 AI 智能体，他就能可信地运行起过去要 100 人公司才能撑起的那一摊事。这件事不再是“管理人”，而是“编排一小批同时跨越这三大支柱运转的 AI 智能体”。"
       }
     }
   }
