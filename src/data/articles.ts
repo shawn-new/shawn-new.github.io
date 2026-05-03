@@ -151,5 +151,46 @@ export const articles: Article[] = [
         chinese: "在 AI 原生时代，两极的价值会持续累积：拥有数据的“主权者”和拥有平台工作流的“建筑师”。这正好呼应了第一篇里“产品 vs 基座”的分化。中间层——中层经理，以及那些负责在两极之间搬运产物的“数据搬运工”——会最先被压缩掉。这种压缩正是“1 人独角兽”这个被反复讨论的概念能够立得住的原因。当一个个体能同时调动持有专有数据、内化洞察、产品化工作流的 AI 智能体，他就能可信地运行起过去要 100 人公司才能撑起的那一摊事。这件事不再是“管理人”，而是“编排一小批同时跨越这三大支柱运转的 AI 智能体”。"
       }
     }
+  },
+  {
+    id: "simplify-mcp-login",
+    titleEn: "Escaping MCP Login Hell: One Login to Rule Them All",
+    titleZh: "走出 MCP 登录地狱：一次登录，全部接入",
+    content: {
+      title: "Article 4: Simplifying MCP Login Hell",
+      scenario: {
+        label: "Scenario: Twelve Consent Screens Before Lunch / 场景：午饭前点掉十二个授权框",
+        english: "Picture a developer trying to wire a single coding agent into the tools they actually use at work — Figma for designs, GitHub for code, Linear for tickets, Notion for docs, Snowflake for data. Each MCP server speaks OAuth, which sounds clean until you live it. The agent pops a browser. The user logs into Figma. Then GitHub. Then Linear. Then Notion. Then Snowflake. A dozen consent screens, a dozen refresh-token lifecycles, a dozen places where a silently expired credential will break the agent at the worst possible moment. Now multiply that by every employee at a 10,000-person enterprise, with no central record of which agent is talking to which system on whose behalf. This is what Garrett Galow at WorkOS calls MCP login hell — and it’s the friction quietly capping how useful AI agents can actually be inside real companies.",
+        chinese: "想象一个开发者要把一个 coding agent 接到他真正在用的那些工具上——设计用 Figma、代码在 GitHub、工单在 Linear、文档在 Notion、数据在 Snowflake。每个 MCP server 都说 OAuth，听上去挺干净，真用起来就完全不是这回事。agent 弹一个浏览器，用户先登 Figma，再登 GitHub，再登 Linear，再登 Notion，再登 Snowflake——十二个授权框，十二条 refresh token 的生命周期，十二个“某天悄悄过期”然后在最不该坏的时候把 agent 干崩的地方。把这件事乘以一家一万人公司里的每一个员工，再加上没有任何中央记录能告诉你“哪个 agent 此刻正以谁的身份在访问哪个系统”，你就拿到了 WorkOS 的 Garrett Galow 说的 MCP 登录地狱——它是当下悄悄压住 AI agent 在真实企业里能有多好用的那道天花板。"
+      },
+      points: {
+        label: "How to Untangle It / 怎么解开这团乱麻",
+        items: [
+          {
+            titleEn: "1. Stop Treating MCP Auth as N Independent OAuth Flows",
+            titleZh: "1. 别再把 MCP 鉴权当成 N 条互不相干的 OAuth 流",
+            english: "The default mental model is that each MCP client ↔ MCP server pair is its own OAuth relationship, with its own consent screen and its own token. That model worked when humans logged into a handful of SaaS apps a day. It collapses the moment an agent has to talk to ten servers in a single task, because each pair-wise relationship is one more thing to authorize, store, refresh, monitor, and revoke. The mental shift is to treat the identity provider — the same Okta, Entra, or Google Workspace the company already owns — as the single source of truth, and treat every MCP server as a downstream resource that trusts the IdP rather than each individual client. Once the IdP is the broker, the number of credentials a user manages drops from N×M back to one.",
+            chinese: "默认的思维模型是：每一对 MCP client ↔ MCP server 都是一段独立的 OAuth 关系，各有各的授权框、各有各的 token。这个模型在人一天只登几款 SaaS 的时代是够用的。可一旦一个 agent 在一项任务里要同时和十个 server 通信，它就立刻塌掉了——因为每一对关系都意味着多一个要授权、要保存、要刷新、要监控、要回收的东西。思路上的转变是：把公司本来就有的身份提供者 (Okta、Entra、Google Workspace) 当作唯一的事实来源，把每一个 MCP server 当作一个“信任 IdP、而不是分别信任每个 client”的下游资源。一旦 IdP 变成中间人，用户要管的凭据就从 N×M 重新降到 1。"
+          },
+          {
+            titleEn: "2. Cross-App Access: Make the IdP a First-Class Decision Maker",
+            titleZh: "2. Cross-App Access：让 IdP 真正坐到决策桌前",
+            english: "The concrete pattern Galow demos is Cross-App Access (XAA), an OAuth 2.0 extension where the enterprise IdP doesn’t just authenticate the user — it explicitly approves the connection between a specific MCP client and a specific MCP server. In the Cursor → Okta → Figma demo, the user logs into Okta exactly once. Cursor asks the IdP for permission to act against Figma; Okta checks policy, mints a scoped, short-lived token, and Cursor uses it against Figma without Figma ever showing its own consent screen. From the user’s perspective the second, third, and tenth MCP server just work. From IT’s perspective every cross-app connection is a policy decision the IdP made and logged — which is the part that has been quietly missing from the OAuth-everywhere world.",
+            chinese: "Galow 在演讲里展示的具体范式是 Cross-App Access (XAA)，一种 OAuth 2.0 扩展：企业 IdP 不仅负责认证用户，还显式地批准“某个 MCP client 去访问某个 MCP server”这件事本身。在 Cursor → Okta → Figma 的 demo 里，用户只在 Okta 登一次。Cursor 向 IdP 申请“代表用户去访问 Figma”的许可；Okta 按策略校验，签发一个作用域明确、寿命很短的 token，Cursor 拿着它去访问 Figma，而 Figma 从头到尾没有再弹自己的授权框。从用户视角看，第二个、第三个、第十个 MCP server“就直接能用”。从 IT 视角看，每一次跨应用连接都是一次 IdP 做出并留痕的策略决定——这正是过去“到处都是 OAuth”的世界里悄悄缺位的那一块。"
+          },
+          {
+            titleEn: "3. Centralize Governance Before the Agent Sprawl Outpaces You",
+            titleZh: "3. 在 agent 蔓延失控之前，把治理收归中央",
+            english: "The login pain is the symptom most users feel; the real enterprise problem is the loss of visibility and control. Without a central broker, there is no clean answer to questions like: which MCP servers does our company actually depend on, which AI agents have which scopes against our customer data, and how do we revoke a compromised agent across all of them at once? Routing every MCP authorization through the IdP makes those questions answerable: a single audit log of cross-app grants, a single place to enforce least-privilege scopes, a single kill switch when an agent or a vendor goes bad. The right time to put this in place is now, before each team has independently wired its favorite agent into a dozen MCP servers using personal tokens that nobody can see, rotate, or revoke.",
+            chinese: "登录卡顿是大多数用户能感觉到的表层症状，真正棘手的企业问题是失去可见性和控制力。没有一个中央代理，下面这些问题就没有干净的答案：我们公司到底在依赖哪些 MCP server？哪些 AI agent 拥有哪些访问客户数据的 scope？某个 agent 被攻陷时，怎么在所有 server 上同时把它吊销掉？把每一次 MCP 授权都走 IdP，这些问题就有答案了：一条统一的跨应用授权审计日志、一个统一的最小权限 scope 强制点、一个统一的“一键拔网线”开关。落地这套机制最合适的时机是现在——趁各个团队还没各自用个人 token 把自己最喜欢的 agent 接到十几个 MCP server 上、最后没人看得见、没人轮换、也没人能回收。"
+          }
+        ]
+      },
+      conclusion: {
+        label: "Conclusion: Identity Is the Real MCP Substrate / 总结：身份才是 MCP 真正的底座",
+        english: "If MCP is going to be the bus that connects every AI agent to every enterprise system, then identity — not the tool catalog, not the model — is the layer that decides whether it stays governable. The pattern that wins is unglamorous: one login at the IdP, IdP-mediated tokens to each MCP server, every grant logged and revocable from a single console. Builders should design new MCP servers to delegate to an enterprise IdP from day one rather than rolling their own OAuth dance. Buyers should stop accepting agents that demand a fresh login per tool and start asking vendors how they integrate with the IdP the company already runs. The teams that solve login hell first won’t just have happier developers — they’ll be the ones safely running agents at a scale everyone else is still afraid to ship.",
+        chinese: "如果 MCP 要成为把每一个 AI agent 接到每一个企业系统的总线，那么决定它是否还能被治理的，不是工具目录、也不是模型，而是身份这一层。最终会赢的范式并不性感：在 IdP 登一次，由 IdP 向每个 MCP server 颁发 token，每一次授权都有日志、能从同一个控制台一键回收。做产品的人应该从第一天起就让新的 MCP server 把鉴权委托给企业 IdP，而不是再造一套自己的 OAuth 舞步；做采购的人应该不再接受“一个工具一次登录”的 agent，而开始反问厂商：你们怎么和我们已经在用的 IdP 集成？最先解决登录地狱的团队，收获的不只是更开心的工程师——他们会成为别人还不敢上线的那种 agent 规模下，唯一能安全跑起来的那批人。"
+      }
+    }
   }
 ];
