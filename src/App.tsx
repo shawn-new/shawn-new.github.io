@@ -1,9 +1,19 @@
 import { useState, useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import rehypeSlug from 'rehype-slug';
 import { articles, type Article } from './data/articles';
 import './styles/App.css';
+
+const slugify = (text: string) =>
+  text.toLowerCase().replace(/[^\w一-龥]+/g, '-').replace(/^-+|-+$/g, '');
+
+const makeHeading = (level: 2 | 3) =>
+  ({ children }: { children?: string | string[] }) => {
+    const text = Array.isArray(children) ? children.join('') : (children ?? '');
+    const Tag = `h${level}` as const;
+    return <Tag id={slugify(text)}>{children}</Tag>;
+  };
+
+const markdownComponents = { h2: makeHeading(2), h3: makeHeading(3) };
 
 function App() {
   const [currentArticle, setCurrentArticle] = useState<Article | null>(null);
@@ -112,7 +122,7 @@ function App() {
         const level = l.startsWith('### ') ? 3 : 2;
         const text = l.replace(/^###?\s+/, '').trim();
         // Simple slugify logic to match rehype-slug
-        const slug = text.toLowerCase().replace(/[^\w\u4e00-\u9fa5]+/g, '-').replace(/^-+|-+$/g, '');
+        const slug = slugify(text);
         return { level, text, slug };
       });
   };
@@ -182,7 +192,7 @@ function App() {
               </div>
               <h1>{locale === 'cn' ? currentArticle.titleZh : currentArticle.titleEn}</h1>
               <div className="md-content">
-                <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeSlug]}>
+                <ReactMarkdown components={markdownComponents}>
                   {filteredContent}
                 </ReactMarkdown>
               </div>
