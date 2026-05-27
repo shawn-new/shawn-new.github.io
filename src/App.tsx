@@ -5,23 +5,24 @@ import rehypeSlug from 'rehype-slug';
 import { articles, type Article } from './data/articles';
 import './styles/App.css';
 
+const getInitialLocale = (): 'en' | 'cn' => {
+  const path = window.location.pathname.toLowerCase();
+  const params = new URLSearchParams(window.location.search);
+  const queryLang = params.get('locale') || params.get('lang');
+  return path.includes('/cn/') || queryLang === 'cn' || queryLang === 'zh' ? 'cn' : 'en';
+};
+
 function App() {
   const [currentArticle, setCurrentArticle] = useState<Article | null>(null);
-  const [locale, setLocale] = useState<'en' | 'cn'>('en');
+  const [locale] = useState<'en' | 'cn'>(getInitialLocale);
   const [activeSlug, setActiveSlug] = useState<string>('');
   const heroRef = useRef<HTMLElement>(null);
+  const tocScrollOffset = 100 + 32;
 
   useEffect(() => {
-    const path = window.location.pathname.toLowerCase();
-    const params = new URLSearchParams(window.location.search);
-    const queryLang = params.get('locale') || params.get('lang');
-    if (path.includes('/cn/') || queryLang === 'cn' || queryLang === 'zh') {
-      setLocale('cn');
-    }
-
-    const handleHashChange = () => {
+    const selectArticleFromHash = () => {
       const hash = window.location.hash.replace('#', '');
-      if (hash && !hash.startsWith('section-')) { // Avoid interfering with TOC anchors
+      if (hash && !hash.startsWith('section-')) {
         const article = articles.find(a => a.id === hash);
         if (article) {
           setCurrentArticle(article);
@@ -35,27 +36,35 @@ function App() {
       }
     };
 
-    window.addEventListener('hashchange', handleHashChange);
-    handleHashChange();
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    window.addEventListener('hashchange', selectArticleFromHash);
+    window.addEventListener('popstate', selectArticleFromHash);
+    selectArticleFromHash();
+    return () => {
+      window.removeEventListener('hashchange', selectArticleFromHash);
+      window.removeEventListener('popstate', selectArticleFromHash);
+    };
   }, []);
 
   // TOC active slug tracking
   useEffect(() => {
-    if (!currentArticle) { setActiveSlug(''); return; }
-    const NAV_OFFSET = 100 + 32; // nav height + margin
+    if (!currentArticle) return;
     const handleScroll = () => {
       const headings = Array.from(document.querySelectorAll<HTMLElement>('.md-content h2, .md-content h3'));
-      let current = '';
+      let current = headings[0]?.id || '';
+      let closestDistance = Number.POSITIVE_INFINITY;
       for (const h of headings) {
-        if (h.getBoundingClientRect().top <= NAV_OFFSET + 10) current = h.id;
+        const distance = Math.abs(h.getBoundingClientRect().top - tocScrollOffset);
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          current = h.id;
+        }
       }
       setActiveSlug(current);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [currentArticle]);
+  }, [currentArticle, tocScrollOffset]);
 
   // Hero snap scroll: instant jump to articles on first wheel-down
   useEffect(() => {
@@ -76,7 +85,7 @@ function App() {
   const commentaries = articles.filter(a => a.category === 'Commentary');
 
   const getFilteredMarkdown = (body: string) => {
-    const lines = body.split('\n');
+    const lines = body.replace(/\\n/g, '\n').split('\n');
     const filteredLines: string[] = [];
     let currentBlockLang: 'en' | 'cn' | 'neutral' = 'en';
 
@@ -118,7 +127,11 @@ function App() {
   };
 
   const navigateTo = (id: string | null) => {
-    window.location.hash = id || '';
+    const nextUrl = id ? `#${id}` : `${window.location.pathname}${window.location.search}`;
+    window.history.pushState(null, '', nextUrl);
+    const article = id ? articles.find(a => a.id === id) ?? null : null;
+    setCurrentArticle(article);
+    window.scrollTo(0, 0);
   };
 
   const renderArticleCard = (article: Article, index: number) => (
@@ -135,6 +148,7 @@ function App() {
 
   const filteredContent = currentArticle ? getFilteredMarkdown(currentArticle.body) : '';
   const toc = currentArticle ? getTOC(filteredContent) : [];
+  const tocActiveSlug = currentArticle ? activeSlug : '';
 
   return (
     <div className="App">
@@ -199,13 +213,17 @@ function App() {
               <div className="toc-label">Contents</div>
               <ul className="toc-list">
                 {toc.map((item, idx) => (
-                  <li key={idx} className={`toc-item level-${item.level}${activeSlug === item.slug ? ' active' : ''}`}>
+                  <li key={idx} className={`toc-item level-${item.level}${tocActiveSlug === item.slug ? ' active' : ''}`}>
                     <a
                       href={`#${item.slug}`}
                       onClick={(e) => {
                         e.preventDefault();
                         const el = document.getElementById(item.slug);
-                        if (el) el.scrollIntoView({ behavior: 'instant' });
+                        if (el) {
+                          const top = el.getBoundingClientRect().top + window.scrollY - tocScrollOffset;
+                          window.scrollTo({ top, behavior: 'auto' });
+                          setActiveSlug(item.slug);
+                        }
                       }}
                     >
                       {item.text}

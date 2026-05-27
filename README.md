@@ -18,7 +18,7 @@ A modern, minimalist, bilingual (EN/ZH) blog featuring deep-dive insights on the
 ## 🛠️ Getting Started
 
 ### Prerequisites
-- Node.js (Latest LTS)
+- Node.js 22.13.1 (`nvm use` reads the included `.nvmrc`)
 - npm or pnpm
 
 ### Installation
@@ -29,6 +29,31 @@ npm install
 ### Local Development
 ```bash
 npm run dev
+```
+
+### Article Workflow
+Articles live in `content/articles/*.md` as Obsidian-friendly Markdown files with YAML frontmatter.
+
+To regenerate the typed app data:
+```bash
+npm run sync
+```
+
+By default, the sync script reads from `content/articles`. To sync directly from an Obsidian vault folder:
+```bash
+OBSIDIAN_ARTICLES_DIR="/Users/xichaochen/Documents/Obsidian Vault/文章" npm run sync
+```
+
+### Checks
+```bash
+npm run lint
+npm run build
+npm test
+```
+
+For only the Selenium browser coverage:
+```bash
+npm run test:selenium
 ```
 
 ### Deployment to GitHub Pages
