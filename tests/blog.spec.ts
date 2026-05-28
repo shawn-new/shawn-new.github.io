@@ -90,7 +90,12 @@ test('TOC: active item updates as user scrolls', async ({ page }) => {
   if (count < 2) return;
 
   const secondHeadingId = await headings.nth(1).getAttribute('id');
-  await headings.nth(1).scrollIntoViewIfNeeded();
+  await page.evaluate((id) => {
+    const heading = document.getElementById(id);
+    if (!heading) return;
+    const top = heading.getBoundingClientRect().top + window.scrollY - 112;
+    window.scrollTo({ top, behavior: 'auto' });
+  }, secondHeadingId);
 
   // Wait briefly for scroll listener to fire
   await page.waitForTimeout(200);

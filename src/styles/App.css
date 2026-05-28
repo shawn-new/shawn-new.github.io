@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;450;500;600;700&family=Lora:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 
 :root {
   --bg-color: #FDFDFD;
@@ -7,10 +7,12 @@
   --line-color: #111111;
   --hairline: rgba(0, 0, 0, 0.06);
   --font-vogue: 'Playfair Display', serif;
-  --font-sans: 'Inter', sans-serif;
+  --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-body: 'Lora', Georgia, serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
   --max-width: 1400px; /* 增大容器以容纳 TOC */
-  --content-width: 720px;
-  --nav-height: 100px;
+  --content-width: 760px;
+  --nav-height: 84px;
   --transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
@@ -67,8 +69,8 @@ nav {
 .logo {
   font-family: var(--font-vogue);
   font-weight: 900;
-  font-size: 2.2rem;
-  letter-spacing: 1rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.75rem;
   text-transform: uppercase;
   cursor: pointer;
   line-height: 1;
@@ -81,24 +83,25 @@ main {
 
 /* --- Hero --- */
 .hero {
-  padding: 18rem 0 14rem 0;
+  padding: 12rem 0 9rem 0;
   text-align: center;
 }
 
 .hero h1 {
   font-family: var(--font-vogue);
-  font-size: clamp(6rem, 22vw, 16rem);
+  font-size: clamp(4.5rem, 17vw, 12rem);
   font-weight: 900;
-  line-height: 0.72;
+  line-height: 0.78;
   text-transform: uppercase;
-  letter-spacing: -0.6rem;
-  margin-bottom: 6rem;
+  letter-spacing: -0.28rem;
+  margin-bottom: 3.5rem;
 }
 
 .hero p {
-  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
   text-transform: uppercase;
-  letter-spacing: 0.8rem;
+  letter-spacing: 0.45rem;
   font-weight: 600;
   color: var(--secondary-text);
 }
@@ -106,8 +109,8 @@ main {
 /* --- Article List --- */
 .article-card {
   display: grid;
-  grid-template-columns: 180px 1fr;
-  padding: 10rem 0;
+  grid-template-columns: 120px 1fr;
+  padding: 6rem 0;
   border-bottom: 1px solid var(--hairline);
   cursor: pointer;
   transition: var(--transition);
@@ -115,39 +118,46 @@ main {
 
 .article-card:hover {
   background: rgba(0, 0, 0, 0.01);
-  padding-left: 3rem;
+  padding-left: 1.5rem;
 }
 
 .article-number {
   font-family: var(--font-vogue);
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-style: italic;
   color: var(--hairline);
 }
 
 .article-info h2 {
   font-family: var(--font-vogue);
-  font-size: 4.5rem;
-  line-height: 0.9;
-  letter-spacing: -0.15rem;
-  margin-bottom: 2.5rem;
+  font-size: 3.1rem;
+  line-height: 1;
+  letter-spacing: -0.06rem;
+  margin-bottom: 1.35rem;
+}
+
+.card-meta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04rem;
 }
 
 .category-label {
-  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.6rem;
-  border-bottom: 4px solid var(--line-color);
-  padding-bottom: 2.5rem;
-  margin: 15rem 0 5rem 0;
+  letter-spacing: 0.32rem;
+  border-bottom: 2px solid var(--line-color);
+  padding-bottom: 1.5rem;
+  margin: 8rem 0 2.5rem 0;
 }
 
 /* --- Article Page Layout: Content + TOC --- */
 .article-page-layout {
   display: grid;
   grid-template-columns: 1fr 280px; /* 两栏：左侧自适应正文，右侧固定 280px 目录 */
-  gap: 8rem;
+  gap: 5rem;
   align-items: start;
   max-width: 1200px; /* 文章页局部容器 */
   margin: 0 auto;
@@ -155,28 +165,29 @@ main {
 }
 
 .article-view {
-  padding: 12rem 0;
+  padding: 7rem 0;
   max-width: var(--content-width);
 }
 
 /* --- TOC Sidebar --- */
 .toc-sidebar {
   position: sticky;
-  top: calc(var(--nav-height) + 4rem); /* 避开固定 Header */
-  padding: 12rem 0 4rem 0;
+  top: calc(var(--nav-height) + 2.5rem); /* 避开固定 Header */
+  padding: 7rem 0 3rem 0;
   max-height: calc(100vh - var(--nav-height));
   overflow-y: auto;
   border-left: 1px solid var(--hairline);
-  padding-left: 2.5rem;
+  padding-left: 2rem;
 }
 
 .toc-label {
-  font-size: 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
   text-transform: uppercase;
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.22rem;
   color: var(--text-color);
   font-weight: 900;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .toc-list {
@@ -184,17 +195,18 @@ main {
 }
 
 .toc-item {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .toc-item a {
   text-decoration: none;
   color: var(--secondary-text);
-  font-size: 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  font-weight: 700;
-  line-height: 1.5;
+  letter-spacing: 0.04rem;
+  font-weight: 600;
+  line-height: 1.45;
   transition: color 0.3s;
 }
 
@@ -216,12 +228,13 @@ main {
 }
 
 .back-link {
-  font-size: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.26rem;
   color: var(--secondary-text);
-  margin-bottom: 12rem;
+  margin-bottom: 6rem;
   display: inline-block;
   cursor: pointer;
 }
@@ -229,35 +242,37 @@ main {
 .article-metadata-shelf {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 12rem;
-  padding: 5rem 0;
+  margin-bottom: 6rem;
+  padding: 2.5rem 0;
   border-top: 1px solid var(--line-color);
   border-bottom: 1px solid var(--line-color);
 }
 
 .meta-label {
+  font-family: var(--font-mono);
   font-size: 0.5rem;
   text-transform: uppercase;
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.18rem;
   color: var(--secondary-text);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.85rem;
   font-weight: 800;
 }
 
 .meta-value {
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.15rem;
+  letter-spacing: 0.05rem;
 }
 
 .article-view h1 {
   font-family: var(--font-vogue);
-  font-size: 7rem;
+  font-size: 4.5rem;
   font-weight: 900;
-  line-height: 0.85;
-  letter-spacing: -0.3rem;
-  margin-bottom: 12rem;
+  line-height: 0.95;
+  letter-spacing: -0.08rem;
+  margin-bottom: 6rem;
 }
 
 /* --- Markdown Typography --- */
@@ -266,59 +281,63 @@ main {
 }
 
 .md-content {
-  font-size: 1.35rem;
-  line-height: 2.4;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 0;
 }
 
-.md-content p { margin-bottom: 5rem; }
+.md-content p { margin-bottom: 1.25rem; }
 
 .md-content h2 {
-  font-family: var(--font-vogue);
-  font-size: 4rem;
-  font-weight: 900;
-  margin: 12rem 0 5rem 0;
-  line-height: 0.95;
-  letter-spacing: -0.1rem;
+  font-family: var(--font-sans);
+  font-size: 2.35rem;
+  font-weight: 700;
+  margin: 5.5rem 0 1.8rem 0;
+  line-height: 1.08;
+  letter-spacing: 0;
 }
 
 .md-content h3 {
-  font-family: var(--font-sans);
-  font-size: 0.95rem;
-  font-weight: 900;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5rem;
-  margin: 8rem 0 3rem 0;
-  border-bottom: 3px solid var(--line-color);
+  letter-spacing: 0.14rem;
+  margin: 3.5rem 0 1.2rem 0;
+  border-bottom: 2px solid var(--line-color);
   display: inline-block;
-  padding-bottom: 0.8rem;
+  padding-bottom: 0.45rem;
 }
 
 .md-content blockquote {
-  margin: 12rem -8rem;
-  padding: 4rem 8rem;
+  margin: 4rem -2.5rem;
+  padding: 2.2rem 2.5rem;
   font-family: var(--font-vogue);
-  font-size: 3.5rem;
-  line-height: 1;
+  font-size: 2rem;
+  line-height: 1.15;
   font-style: italic;
   font-weight: 900;
-  letter-spacing: -0.15rem;
+  letter-spacing: -0.03rem;
   border-top: 1px solid var(--hairline);
   border-bottom: 1px solid var(--hairline);
 }
 
 .edit-history-section {
-  margin-top: 20rem;
-  padding-top: 8rem;
+  margin-top: 8rem;
+  padding-top: 3rem;
   border-top: 1px solid var(--line-color);
 }
 
 /* Footer */
 footer {
-  padding: 25rem 0 12rem 0;
+  padding: 10rem 0 6rem 0;
   text-align: center;
+  font-family: var(--font-mono);
   font-size: 0.65rem;
   text-transform: uppercase;
-  letter-spacing: 1rem;
+  letter-spacing: 0.35rem;
   color: var(--secondary-text);
   opacity: 0.5;
 }

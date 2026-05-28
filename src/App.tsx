@@ -17,7 +17,7 @@ function App() {
   const [locale] = useState<'en' | 'cn'>(getInitialLocale);
   const [activeSlug, setActiveSlug] = useState<string>('');
   const heroRef = useRef<HTMLElement>(null);
-  const tocScrollOffset = 100 + 32;
+  const tocScrollOffset = 84 + 28;
 
   useEffect(() => {
     const selectArticleFromHash = () => {
