@@ -85,6 +85,9 @@ function App() {
   const commentaries = articles.filter(a => a.category === 'Commentary');
 
   const getFilteredMarkdown = (body: string) => {
+    const hasLanguageMarkers = body.includes('**English:**') || body.includes('**中文：**');
+    if (!hasLanguageMarkers) return body.replace(/\\n/g, '\n');
+
     const lines = body.replace(/\\n/g, '\n').split('\n');
     const filteredLines: string[] = [];
     let currentBlockLang: 'en' | 'cn' | 'neutral' = 'en';
