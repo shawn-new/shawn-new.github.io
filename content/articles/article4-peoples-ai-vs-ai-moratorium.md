@@ -13,6 +13,7 @@ keywords:
   - "Big Tech"
 history:
   - "Mon May 25 2026 00:00:00 GMT-0700 (Pacific Daylight Time): Initial draft"
+  - "Sat May 30 2026 00:00:00 GMT-0700 (Pacific Daylight Time): Full-site editorial polish"
 ---
 
 # Against the AI Moratorium: The People's AI Must Be Built
@@ -31,7 +32,7 @@ That is the problem this piece responds to: concentrated AI power is real, but a
 
 This matters now because AI infrastructure, regulation, labor politics, and public fear are colliding at the same time. The rules written in this window may decide whether AI becomes only a corporate weapon or also a public tool.
 
-Big Tech will turn AI into a profit machine. It will replace labor. Push down wages. Expand surveillance. Keep moving productivity gains toward capital.
+Big Tech has strong incentives to turn AI into a profit machine: replace labor, push down wages, expand surveillance, and keep productivity gains moving toward capital.
 
 But I reject his main prescription.
 
@@ -51,7 +52,7 @@ The response has four steps: explain Sanders's claim, show why a pause can freez
 
 为什么现在要讲：AI 基础设施、监管、劳工政治和公众恐惧正在同一时间撞在一起。这个窗口写下的规则，可能决定 AI 只会成为企业武器，还是也能成为公共工具。
 
-Big Tech 会把 AI 变成利润机器。它会替代劳动。压低工资。扩大监控。把生产率收益继续集中到资本手里。
+Big Tech 有很强的激励把 AI 变成利润机器：替代劳动，压低工资，扩大监控，并把生产率收益继续集中到资本手里。
 
 但我不同意他的主要处方。
 
@@ -249,6 +250,41 @@ That still leaves a hard question: what should regulation do if the pause button
 
 这会留下一个更难的问题：如果暂停键用错了，监管到底应该做什么？
 
+## The Counterargument For A Pause
+## 支持暂停的最强理由
+
+**English:**
+
+The strongest case for a pause should be taken seriously.
+
+AI infrastructure is not abstract. Data centers use electricity, water, land, tax incentives, and grid capacity. If a community bears those costs while the gains flow to a small group of platforms, the public has a right to object.
+
+There is also a sequencing argument. Once surveillance systems, worker-monitoring tools, deepfake pipelines, and automated replacement workflows are deployed, the damage may be hard to reverse. A pause can create time for democratic institutions to catch up.
+
+That argument is not foolish.
+
+The question is whether a broad pause actually gives power to the public, or whether it gives more time and scarcity advantage to incumbents.
+
+My concern is the second outcome.
+
+A good policy should slow the harmful uses, tax the externalities, force auditability, and fund public capability. A broad infrastructure pause risks doing one thing too bluntly: making AI harder to access for everyone except the companies that already have it.
+
+**中文：**
+
+支持暂停的最强理由，应该认真对待。
+
+AI 基础设施不是抽象东西。数据中心会消耗电力、水、土地、税收优惠和电网容量。如果社区承担这些成本，而收益流向少数平台，公众当然有权反对。
+
+还有一个顺序问题。监控系统、工人管理工具、深伪管线和自动化替代流程一旦部署，伤害可能很难逆转。暂停可以给民主机构争取追赶时间。
+
+这个论点不蠢。
+
+真正的问题是：广泛暂停到底会把权力交给公众，还是会把更多时间和稀缺资源优势交给 incumbents？
+
+我担心的是后者。
+
+好的政策应该放慢有害用途，征收外部性成本，强制可审计，并资助公共能力。广泛基础设施暂停的问题是太钝：它可能让所有人更难获得 AI，除了那些已经拥有 AI 的公司。
+
 ## What Regulation Should Do
 ## 监管应该做什么
 
@@ -321,6 +357,22 @@ AI will become power.
 
 Ordinary people should demand more than a slower arrival of power. They should demand some of that power for themselves.
 
+That is the question Sanders's argument leaves behind.
+
+The hard question is not whether we need AI safety. We do.
+
+The hard question is safety for whom, from whom, and with what power on the other side.
+
+If safety only means making ordinary people wait, it may leave them dependent on the same institutions that already control the tools.
+
+If safety means giving people ways to inspect, contest, and redirect AI systems, then safety becomes democratic capacity.
+
+So the next time someone says "AI safety," ask what kind of safety they mean.
+
+Safety that protects people from AI.
+
+Or safety that gives people enough power to protect themselves.
+
 **中文：**
 
 Sanders 的警告值得听。
@@ -342,6 +394,22 @@ AI 只给巨头用，还是也给普通人用？
 AI 会成为权力。
 
 普通人不该只要求权力慢一点到来。普通人应该要求自己也拥有它。
+
+这才是 Sanders 的论点最后留下的问题。
+
+真正难的问题不是我们要不要 AI safety。我们当然需要。
+
+真正难的问题是：谁的 safety？防谁？另一边又给普通人留下什么能力？
+
+如果 safety 只是让普通人等待，它可能只是让普通人继续依赖那些已经控制工具的机构。
+
+如果 safety 意味着普通人有办法检查、质疑、反制和重新定向 AI 系统，那 safety 就不只是防护栏。它会变成一种民主能力。
+
+所以下一次有人说 AI safety 时，真正该追问的是：他说的是哪一种 safety？
+
+是保护人们不被 AI 伤害的 safety。
+
+还是让人们拥有足够能力保护自己的 safety。
 
 ## References
 

@@ -14,6 +14,7 @@ history:
   - "Sat Mar 28 2026 17:00:00 GMT-0700 (Pacific Daylight Time): Initial release"
   - "Tue Mar 31 2026 17:00:00 GMT-0700 (Pacific Daylight Time): Added temporal arc, citations, and North Star collaboration section"
   - "Wed Apr 01 2026 17:00:00 GMT-0700 (Pacific Daylight Time): Prose rewrite — less formulaic, more human voice"
+  - "Sat May 30 2026 00:00:00 GMT-0700 (Pacific Daylight Time): Full-site editorial polish"
 ---
 
 # The Engineering Binary: Product, Infrastructure, and the FDE Bridge
@@ -30,7 +31,7 @@ React. Go. Kubernetes. Postgres. Frontend. Backend. Data. DevOps.
 
 That made sense when implementation was the hard part. The stack defined the work because writing the code took most of the energy. Teams split the system into layers. Each layer got its own specialist. Coordination was painful, but everyone accepted the cost.
 
-The problem now is simple: AI is making implementation cheaper.
+Now the problem is different: AI is making implementation cheaper.
 
 When code gets easier to produce, the old engineering categories lose force. The hard question moves to ownership. Who understands the user, the platform, or the deployment reality well enough to direct AI and stay accountable for the result?
 
@@ -38,7 +39,7 @@ This matters now because AI can already draft across frontend, backend, data, te
 
 That is the bottleneck shift.
 
-It can scaffold the component. It can write the CRUD endpoint. It can draft the migration. What it cannot do, at least not by itself, is own the outcome. It cannot decide why this feature matters, why this user is stuck, why this deployment failed inside a messy enterprise, or which platform primitive should exist for the next hundred product teams.
+AI can scaffold the component. It can write the CRUD endpoint. It can draft the migration. What it cannot do, at least not by itself, is own the outcome. It cannot decide why this feature matters, why this user is stuck, why this deployment failed inside a messy enterprise, or which platform primitive should exist for the next hundred product teams.
 
 That is the new shape of engineering.
 
@@ -54,7 +55,7 @@ React。Go。Kubernetes。Postgres。前端。后端。数据。DevOps。
 
 这在过去是合理的。实现本身很难。写代码占掉大部分精力。团队把系统切成一层一层。每一层都有专家。沟通很痛，但大家接受这个成本。
 
-现在的问题很简单：AI 正在让实现变便宜。
+现在的问题变了：AI 正在让实现变便宜。
 
 代码更容易产出后，旧工程分类的力量会下降。真正难的是 ownership。谁理解用户、平台或部署现实？谁能指挥 AI 写出来，并对结果负责？
 
@@ -62,7 +63,7 @@ React。Go。Kubernetes。Postgres。前端。后端。数据。DevOps。
 
 瓶颈就这样变了。
 
-它能搭组件。能写 CRUD 接口。能起草 migration。它做不到的，是独立拥有结果。它不知道为什么这个功能重要。它不知道用户为什么卡住。它不知道一个产品为什么在真实企业里部署失败。它也不知道哪一个平台原语值得为后面一百个产品团队建出来。
+AI 能搭组件。能写 CRUD 接口。能起草 migration。它做不到的，是独立拥有结果。它不知道为什么这个功能重要。它不知道用户为什么卡住。它不知道一个产品为什么在真实企业里部署失败。它也不知道哪一个平台原语值得为后面一百个产品团队建出来。
 
 这就是工程的新形状。
 
@@ -134,7 +135,7 @@ Every handoff lost context.
 
 The form felt wrong. Nobody owned it. The API was slow. Backend blamed the query. The database engineer had never watched a borrower rage-refresh the page and submit twice.
 
-The Product Engineer sees the whole loop.
+The Product Engineer owns the whole loop.
 
 They understand that a three-second delay can create duplicate applications. They know that a confusing label can break trust. They use AI to move across layers. The important skill shifts from typing code faster to knowing what should exist.
 
@@ -156,7 +157,7 @@ That is the first ownership path: own the user outcome. The second path sits und
 
 表单体验不对，没人真正拥有。API 慢，后端怪查询。数据库工程师从没看过借款人在页面上反复刷新，然后提交两次。
 
-产品工程师看到完整回路。
+产品工程师拥有完整回路。
 
 他理解，三秒延迟可能制造重复申请。一个含糊的标签可能摧毁信任。他用 AI 跨层推进。核心能力从更快打字，转向知道什么东西应该存在。
 
@@ -234,7 +235,7 @@ The FDE also closes the system loop. They send field reality back to Product and
 
 The metric is time to real adoption. If a client cannot reach meaningful usage without a permanent FDE standing beside them, the product has not been deployed. It is being operated by hand.
 
-These three roles are strongest when they work as one system.
+These three roles matter most when they work as one system.
 
 **中文：**
 
@@ -256,7 +257,7 @@ FDE 还负责闭合系统回路。他们把现场现实传回产品和基座。�
 
 关键指标是真实采用速度。如果客户没有常驻 FDE 就无法形成稳定使用，产品还没有完成部署。它只是被人工托管着。
 
-这三类角色放进同一个系统里，力量才会变大。
+这三类角色放进同一个系统里，才真正有力量。
 
 ---
 
@@ -294,6 +295,47 @@ The system metric is year-two NRR: net revenue retention after the customer has 
 产品做出漂亮功能，没人用。基座可用性 99.99%，产品团队却被工单淹没。FDE 变成永久临时方案。公司一直发版，客户却不扩张。
 
 系统级指标是第二年 NRR，也就是客户使用一段时间后的净收入留存。客户愿意扩张，说明产品有用、可靠，并且真的在现实环境里被采用。
+
+---
+
+## The Objection: AI Also Makes Generalists Cheap
+## 反对意见：AI 也会让 Generalist 变便宜
+
+**English:**
+
+The obvious objection is that AI does not only compress specialists. It can also compress generalists.
+
+If everyone can ask AI to move across the stack, "full-stack" stops being a strong identity. A person who merely touches many layers is not defensible. AI can touch many layers too.
+
+That is why ownership matters more than breadth.
+
+The Product Engineer is not valuable because they can write frontend and backend code. They are valuable because they own the user outcome.
+
+The Infrastructure Engineer is not valuable because they know Kubernetes trivia. They are valuable because they create primitives that make other teams faster.
+
+The FDE is not valuable because they can hack integrations. They are valuable because they can cross the messy gap between product promise and customer reality.
+
+AI makes shallow breadth cheap.
+
+It makes accountable ownership more important.
+
+**中文：**
+
+最明显的反对意见是：AI 压缩的不只是 specialist，也会压缩 generalist。
+
+如果每个人都能让 AI 跨栈工作，“full-stack” 本身就不再是强身份。一个人只是能碰很多层，并不防守。AI 也能碰很多层。
+
+所以关键转向了 ownership。
+
+产品工程师的价值，不是他能写前端和后端。他的价值是拥有用户结果。
+
+基座工程师的价值，不是他知道 Kubernetes 冷知识。他的价值是创造让其他团队更快的原语。
+
+FDE 的价值，不是他能临时写 integration。他的价值是跨过产品承诺和客户现实之间的混乱距离。
+
+AI 会让浅层宽度变便宜。
+
+它会让真正负责的 ownership 变得更重要。
 
 ---
 

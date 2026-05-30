@@ -14,6 +14,7 @@ keywords:
   - "Palantir"
 history:
   - "Sat Mar 28 2026 17:00:00 GMT-0700 (Pacific Daylight Time): Initial release"
+  - "Sat May 30 2026 00:00:00 GMT-0700 (Pacific Daylight Time): Full-site editorial polish"
 ---
 
 # Moats in the AI Native Era: The Trinity of Data, Insight, and Workflow
@@ -196,6 +197,47 @@ Databricks 展示了企业版本。一旦数据团队把摄取、转换、治理
 这种护城河会复利。更多用户创造更多模式。更多模式创造更多共同实践。共同实践让工作流更难离开。
 
 Seat 数量不会创造这个。工作流会。
+
+---
+
+## The Objection: Distribution Still Matters
+## 反对意见：Distribution 仍然重要
+
+**English:**
+
+The strongest objection is that data, insight, and workflow are not the whole story.
+
+Distribution still matters. Brand still matters. Capital still matters. Regulatory access still matters. A company with a mediocre product and great distribution can beat a sharper product that nobody sees.
+
+That is true.
+
+But distribution is strongest when it compounds something real.
+
+If a company has distribution but no unique data, no unique insight, and no workflow depth, it can acquire users but may not keep advantage. The base model improves. The platform bundles the feature. The user switches when the same job becomes easier somewhere else.
+
+Distribution can buy attention.
+
+It cannot permanently substitute for owned learning.
+
+The durable version is distribution attached to a compounding core: data that improves with usage, insight that sharpens decisions, and workflow that becomes part of how people operate.
+
+**中文：**
+
+最强的反对意见是：数据、洞察和工作流不是全部。
+
+Distribution 仍然重要。品牌仍然重要。资本仍然重要。监管入口仍然重要。一个产品一般但分发很强的公司，可能打败一个更锋利但没人看见的产品。
+
+这是对的。
+
+但 distribution 最强的时候，是它能放大真实复利。
+
+如果一家公司有 distribution，却没有独特数据、独特洞察和深工作流，它可以获得用户，但未必能长期保住优势。基础模型会进步。平台会打包功能。用户会在同一个任务变得更容易的地方切走。
+
+Distribution 可以买到注意力。
+
+它不能永久替代 owned learning。
+
+真正持久的形态，是 distribution 连接到一个会复利的核心：越用越好的数据，让决策更准的洞察，以及进入人们操作方式里的 workflow。
 
 ---
 
