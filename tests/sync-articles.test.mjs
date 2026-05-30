@@ -57,3 +57,64 @@ Line one.\\n\\nLine two.
   assert.ok(generated.includes('Line one.\\n\\nLine two'));
   assert.ok(!generated.includes('Line one.\\\\n\\\\nLine two'));
 });
+
+test('sync script orders generated articles by newest date first', () => {
+  const tempRoot = mkdtempSync(join(tmpdir(), 'ai-native-blog-sync-order-'));
+  const sourceDir = join(tempRoot, 'articles');
+  const targetFile = join(tempRoot, 'articles.ts');
+
+  execFileSync('mkdir', ['-p', sourceDir]);
+  writeFileSync(
+    join(sourceDir, 'a-older.md'),
+    `---
+id: older
+titleEn: Older Article
+titleZh: 旧文章
+category: Opinions
+date: 2026-01-01
+author: Sean
+keywords: []
+history: []
+---
+
+# Older Article
+# 旧文章
+
+Older body.
+`,
+  );
+  writeFileSync(
+    join(sourceDir, 'z-newer.md'),
+    `---
+id: newer
+titleEn: Newer Article
+titleZh: 新文章
+category: Opinions
+date: 2026-05-30
+author: Sean
+keywords: []
+history: []
+---
+
+# Newer Article
+# 新文章
+
+Newer body.
+`,
+  );
+
+  execFileSync('node', ['scripts/sync-articles.js'], {
+    cwd: process.cwd(),
+    env: {
+      ...process.env,
+      ARTICLES_DIR: sourceDir,
+      ARTICLES_TARGET_FILE: targetFile,
+    },
+    stdio: 'pipe',
+  });
+
+  const generated = readFileSync(targetFile, 'utf8');
+  assert.ok(
+    generated.indexOf('"id": "newer"') < generated.indexOf('"id": "older"'),
+  );
+});

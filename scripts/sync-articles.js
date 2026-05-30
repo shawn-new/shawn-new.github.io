@@ -55,12 +55,19 @@ const toArticle = (filename) => {
   };
 };
 
+const dateTimestamp = (article) => {
+  const timestamp = Date.parse(article.date);
+  return Number.isNaN(timestamp) ? 0 : timestamp;
+};
+
 const articleFiles = fs
   .readdirSync(sourceDir)
   .filter((filename) => filename.toLowerCase().endsWith('.md'))
   .sort();
 
-const articles = articleFiles.map(toArticle);
+const articles = articleFiles
+  .map(toArticle)
+  .sort((a, b) => dateTimestamp(b) - dateTimestamp(a) || a.id.localeCompare(b.id));
 
 const fileContent = `export interface Article {
   id: string;

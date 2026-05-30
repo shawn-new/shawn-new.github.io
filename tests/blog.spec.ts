@@ -18,6 +18,15 @@ test('homepage: article cards are listed', async ({ page }) => {
   expect(await cards.count()).toBeGreaterThan(0);
 });
 
+test('homepage: article cards are ordered newest first', async ({ page }) => {
+  await page.goto('/');
+  const dates = await page.locator('.article-card .card-meta span:first-child').allTextContents();
+  const timestamps = dates.map((date) => new Date(date).getTime());
+
+  expect(timestamps.length).toBeGreaterThan(1);
+  expect(timestamps).toEqual([...timestamps].sort((a, b) => b - a));
+});
+
 // ─── 2. Hero snap scroll ────────────────────────────────────────────────────
 
 test('hero: wheel-down snaps instantly to article list', async ({ page }) => {

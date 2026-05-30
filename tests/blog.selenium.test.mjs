@@ -51,8 +51,11 @@ after(async () => {
 
 test('Selenium: article cards open articles and browser back syncs URL and view', async () => {
   await driver.get(BASE_URL);
-  const firstCard = await driver.wait(until.elementLocated(By.css('.article-card')), 10_000);
-  await firstCard.click();
+  const targetCard = await driver.wait(
+    until.elementLocated(By.xpath('//div[contains(@class, "article-card")][.//h2[contains(., "The Engineering Binary")]]')),
+    10_000,
+  );
+  await targetCard.click();
   await driver.wait(until.urlContains(`#${ARTICLE_ID}`), 10_000);
   await driver.wait(until.elementLocated(By.css('.article-view')), 10_000);
   assert.equal(await driver.getCurrentUrl(), `${BASE_URL}#${ARTICLE_ID}`);
@@ -87,14 +90,14 @@ test('Selenium: English and Chinese locale rendering are clean and separated', a
   await driver.get(`${BASE_URL}#${ARTICLE_ID}`);
   await driver.wait(until.elementLocated(By.css('.md-content')), 10_000);
   const englishText = await driver.findElement(By.css('.md-content')).getText();
-  assert.match(englishText, /For the past decade/);
-  assert.doesNotMatch(englishText, /过去十年/);
+  assert.match(englishText, /For years, engineers were sorted by stack/);
+  assert.doesNotMatch(englishText, /过去很多年/);
   assert.doesNotMatch(englishText, /\\n/);
 
   await driver.get(`${BASE_URL}?locale=cn#${ARTICLE_ID}`);
   await driver.wait(until.elementLocated(By.css('.md-content')), 10_000);
   const chineseText = await driver.findElement(By.css('.md-content')).getText();
-  assert.match(chineseText, /过去十年/);
-  assert.doesNotMatch(chineseText, /For the past decade/);
+  assert.match(chineseText, /过去很多年，工程师按技术栈分类/);
+  assert.doesNotMatch(chineseText, /For years, engineers were sorted by stack/);
   assert.doesNotMatch(chineseText, /\\n/);
 });
