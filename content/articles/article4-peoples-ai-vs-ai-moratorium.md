@@ -18,115 +18,343 @@ history:
 # Against the AI Moratorium: The People's AI Must Be Built
 # 反对 AI 暂停键：普通人的 AI 必须被建造出来
 
-## 桑德斯看对了一半
+## Summary
+## 摘要
 
-伯尼·桑德斯最近关于 AI 的批评，最有力量的地方落在权力判断上。
+**English:**
 
-在那支视频和随后的政策动作里，桑德斯表达的核心观点大致是：AI 正在被少数科技巨头和亿万富翁控制，如果不加限制，它不会自然服务普通工人，而会被用来替代劳动、压低工资、扩大监控、制造深伪信息、消耗社区电力和水资源，并把生产率收益继续转移给资本。他的政策回应，是和 Alexandria Ocasio-Cortez 一起推动 AI Data Center Moratorium Act，要求在隐私、劳工、环境、电力和民主安全等基本保护到位之前，暂停新的大型 AI 数据中心建设。
+I agree with Bernie Sanders's warning about the power structure around AI.
 
-他的焦点落在权力分配上，而非模型能力本身：一旦 AI 的基础设施、模型、数据和分发渠道都握在 Big Tech 手里，它就很难自发成为普通人的解放工具，更可能变成资本进一步 discipline 普通人的工具。
+The context is his recent AI argument and policy push. Sanders warns that Big Tech and billionaires will capture AI, use it against workers, and push the costs of data centers onto communities. His answer is a moratorium on new large AI data centers until stronger safeguards exist.
 
-他说，AI 本身不一定是坏东西。真正的问题是：谁控制它？为了谁使用它？如果控制 AI 的是少数科技巨头和亿万富翁，他们更可能沿着资本最熟悉的方向走：降低劳动成本，扩大监控能力，把生产率收益继续集中到自己手里。
+That is the problem this piece responds to: concentrated AI power is real, but a pause may strengthen the companies that already have power.
 
-这个判断并不愚蠢。相反，它很清醒。
+This matters now because AI infrastructure, regulation, labor politics, and public fear are colliding at the same time. The rules written in this window may decide whether AI becomes only a corporate weapon or also a public tool.
 
-过去几十年的技术史已经反复证明：生产率提高并不会自动转化为普通人的工资、自由时间和尊严。技术可以扩大蛋糕，但蛋糕怎么分，是政治、制度和组织力量决定的。桑德斯担心 AI 被大公司用作替代劳动、削弱工会、压低工资、操纵舆论、侵犯隐私的工具，这些担心都值得认真对待。
+Big Tech will turn AI into a profit machine. It will replace labor. Push down wages. Expand surveillance. Keep moving productivity gains toward capital.
 
-但问题在于，他给出的方向正在滑向一个危险的简化：因为 AI 可能被大公司滥用，所以我们应该暂停 AI 基础设施建设，等民主制度、监管框架和企业责任追上来。
+But I reject his main prescription.
 
-我同意他的风险诊断，但不同意他的处方。
+Pausing AI infrastructure sounds like protection for ordinary people. In practice, it may protect the incumbents. What we need to build is AI that ordinary people can use, audit, and aim back at platforms.
 
-## 暂停发展，未必会削弱巨头
+Safety has to mean more than slowing down. It has to distribute power.
 
-如果 AI 的核心问题是权力集中，那么简单按下暂停键，未必会让权力重新分配给普通人。它甚至可能产生相反效果。
+The response has four steps: explain Sanders's claim, show why a pause can freeze monopoly, argue that ordinary people need AI too, and define what people-first AI should do.
 
-因为在技术扩散的早期，算力、模型、人才和产品能力仍在快速流动。这个阶段虽然混乱，但也给小公司、开源社区、独立开发者、教育者、普通劳动者留下了进入窗口。今天一个普通人能用 AI 学编程、写法律信、分析财报、做市场研究、构建自动化工作流，这件事本身就是一种权力重新分配。
+**中文：**
 
-如果暂停新的数据中心和基础设施建设，最先被限制的很可能是后进入者。巨头已经握有算力、云平台、资本和游说能力。算力越稀缺，价格越高，护城河越深。监管越复杂，合规成本越高，越只有大公司能承担。最后形成的局面，可能不是“民主追上 AI”，更像是“巨头锁定 AI”。
+我同意 Bernie Sanders 对 AI 权力结构的警告。
 
-这就是桑德斯方案最需要被追问的地方：如果我们担心少数公司垄断 AI，为什么要选择一种可能让稀缺资源更加集中在少数公司手里的政策？
+背景是他最近关于 AI 的视频和政策主张。Sanders 警告，Big Tech 和亿万富翁会控制 AI，用它伤害工人，并把数据中心的成本推给社区。他的答案是暂停新的大型 AI 数据中心，直到更强的安全保护到位。
 
-等待大公司变好，也不现实。大公司不是道德主体，它们是激励机器。只要利润来自自动化裁员、数据攫取、封闭生态和监管套利，它们就会沿着这些方向移动。指望它们在没有对抗力量的情况下主动收手，本质上是在要求资本放弃资本逻辑。
+这篇文章回应的问题是：AI 权力集中确实危险，但暂停建设可能强化已经有权力的公司。
 
-这不是方案，这是愿望。
+为什么现在要讲：AI 基础设施、监管、劳工政治和公众恐惧正在同一时间撞在一起。这个窗口写下的规则，可能决定 AI 只会成为企业武器，还是也能成为公共工具。
 
-## 普通人也能使用 AI
+Big Tech 会把 AI 变成利润机器。它会替代劳动。压低工资。扩大监控。把生产率收益继续集中到资本手里。
 
-桑德斯的叙事里，普通人经常被放在一个被动位置：他们是被 AI 替代的工人，被算法操纵的选民，被平台收割的数据源，被数据中心电费外部性影响的社区居民。
+但我不同意他的主要处方。
 
-这些身份都真实存在。但如果普通人只被描绘成 AI 的受害者，我们就漏掉了另一半现实：普通人也可以成为 AI 的使用者。
+暂停 AI 基础设施建设，听起来像保护普通人。实际可能保护巨头。真正需要建设的，是普通人能使用、能审计、能对抗平台的 AI。
 
-AI 最重要的民主化潜力，不只是“帮人更快完成工作”，而是降低判断力和见识的获得成本。过去，很多能力被教育背景、职业网络、咨询费用、语言门槛、技术门槛垄断。你想理解一份合同，要找律师；想看懂一家公司的财报，要懂会计；想构建一个自动化工具，要会编程；想系统学习一个新行业，要有导师和时间。
+安全不该停在减速上。安全要靠权力分散。
 
-现在，一个普通人可以把 AI 变成私人导师、反方辩手、研究助理、代码搭档、谈判教练、事实核查员和思想磨刀石。
+这篇回应分四步：先讲清 Sanders 的观点，再说明暂停为什么可能冻结垄断，然后解释普通人也需要 AI，最后定义 people-first AI 应该做什么。
 
-这不意味着 AI 永远正确。恰恰相反，AI 经常胡说、迎合、遗漏上下文。但一个会使用 AI 的人，可以让它列出反方观点、检查证据链、解释专业术语、比较多个来源、生成问题清单、模拟谈判场景。它不能替代判断，但可以训练判断。
+## What Sanders Is Arguing
+## Sanders 在说什么
 
-这点极其关键。对抗大公司 AI 的最好方式，是让普通人拥有更强的 AI 使用能力。一个不会使用 AI 的公众，只能被 AI 影响。一个会使用 AI 的公众，才有机会审计 AI、反驳 AI、绕过 AI、组织起来对抗 AI。
+**English:**
 
-## 我们需要的是对抗性 AI
+Sanders's recent video and policy push make the same argument: control of AI is concentrating in the hands of a few tech giants and billionaires.
 
-如果大公司会用 AI 最大化利润，那么普通人也需要用 AI 最大化自己的谈判能力、识别能力和组织能力。
+His point is clear. Without constraints, AI will not naturally serve ordinary workers. It is more likely to replace labor, suppress wages, generate deepfakes, expand surveillance, and consume local electricity and water.
 
-这就是我认为真正应该发展的方向：people-first AI，或者说面向普通人的对抗性 AI。
+His policy response is the AI Data Center Moratorium Act, introduced with Alexandria Ocasio-Cortez. The bill would pause new large AI data centers until privacy, labor, environmental, electricity, and democratic safeguards are in place.
 
-它不是“更温柔的聊天机器人”。它应该是劳动者的合同审阅器，能告诉你竞业协议里哪些条款危险；是消费者的价格侦测器，能看出平台有没有对你做个性化加价；是租客的权益助手，能帮你理解房东条款是否合法；是家长和学生的学习教练，能把高质量教育从昂贵学校和补习体系中释放出来；是记者和公民的事实核查系统，能追踪政治广告、深伪视频和企业公关稿里的漏洞；是工会和社区组织的分析工具，能把分散的抱怨变成结构化证据。
+I think his diagnosis is strong.
 
-这类 AI 应该替普通人提高反抗能力，而非替大公司降低成本。让欺骗更难，让压榨更贵，让信息不对称更小。
+His policy direction is too weak.
 
-所以，“AI 安全”不应该被理解为“少建 AI”。更好的理解是：建造安全优先、公众优先、可审计、可竞争、可被普通人使用的 AI。
+The gap between those two sentences is the whole argument. A strong diagnosis can still produce a weak remedy.
 
-真正的安全来自权力分散，技术停滞给不了这种安全。
+**中文：**
 
-## 政策应该限制伤害，而不是冻结能力
+Sanders 最近的视频和政策动作，讲的是同一个问题：AI 的控制权正在集中到少数科技巨头和亿万富翁手里。
 
-反对暂停键，不等于支持无监管狂奔。这里必须讲清楚，否则很容易被误解成替大公司辩护。
+他的判断很清楚。没有约束，AI 不会自然服务普通工人。它更可能被用来替代劳动、压低工资、制造深伪信息、扩大监控，并消耗社区的电力和水资源。
 
-桑德斯对电力、隐私、劳动替代、深伪、民主操纵的担忧，都不是空穴来风。数据中心不能无限制地把电费和水资源成本转嫁给社区。企业不能一边用公共数据训练模型，一边把收益私有化。平台不能用 AI 监控工人、诱导消费者、操纵选民。公司不能把 AI 裁员收益全部分给股东和高管，却让社会承担失业和再培训成本。
+他的政策回应，是和 Alexandria Ocasio-Cortez 推动 AI Data Center Moratorium Act。这个法案要求，在隐私、劳工、环境、电力和民主安全保护到位之前，暂停新的大型 AI 数据中心建设。
 
-但正确的政策方向应该是“管住伤害，扩大能力”，而不是“冻结发展，等待好人出现”。
+我认为他的诊断很强。
+
+他的政策方向太弱。
+
+这两句话之间，就是整篇文章的分歧。诊断可以很强，处方仍然可能太弱。
+
+## Point 1: A Pause May Freeze Monopoly
+## Point 1: 暂停可能冻结垄断
+
+**English:**
+
+Sanders is worried about concentrated power. That worry is valid.
+
+The problem is that a pause may fail to distribute power. It may freeze the current power map.
+
+Early AI diffusion is messy. That messiness gives small companies, open-source communities, independent developers, educators, and ordinary workers an opening. Compute, models, tools, and workflows are still moving. Ordinary people can use AI to learn programming, read contracts, analyze financial statements, do research, and build automation.
+
+That is already a form of power redistribution.
+
+If new data centers and infrastructure are paused, later entrants get blocked first. The giants already have compute, cloud platforms, capital, and lobbying capacity. Scarcer compute raises prices. More complex compliance raises costs. The companies that can absorb those costs are usually the large ones.
+
+So the harder question is this:
+
+If we are worried about AI monopoly, why choose a policy that may push scarce resources further toward the companies that already have them?
+
+Waiting for big companies to become better is not realistic. Big companies are incentive machines. If profit comes from automation layoffs, data extraction, closed ecosystems, and regulatory arbitrage, they will keep moving in those directions.
+
+Without counter-power, capital rarely gives up capital logic.
+
+Restraint from above is insufficient. Ordinary people also need capability from below.
+
+**中文：**
+
+Sanders 的核心担心是权力集中。这个担心成立。
+
+问题是，暂停建设未必会分散权力。它可能把现有权力冻住。
+
+AI 扩散早期很混乱。也正因为混乱，小公司、开源社区、独立开发者、教育者和普通劳动者还有入口。算力、模型、工具和工作流仍在流动。普通人可以用 AI 学编程，读合同，分析财报，做研究，搭自动化。
+
+这已经是一种权力再分配。
+
+如果暂停新的数据中心和基础设施建设，后来者会先被卡住。巨头已经有算力、云平台、资本和游说能力。算力越稀缺，价格越高。合规越复杂，成本越高。最后能承担这些成本的，还是大公司。
+
+所以要追问一个更硬的问题：
+
+如果我们担心少数公司垄断 AI，为什么要选择一种可能让稀缺资源更集中在少数公司手里的政策？
+
+等待大公司变好也不现实。大公司是激励机器。只要利润来自自动化裁员、数据攫取、封闭生态和监管套利，它们就会继续沿着这些方向走。
+
+没有对抗力量，资本很少主动放弃资本逻辑。
+
+上面的约束不够。普通人也需要下面的能力。
+
+## Point 2: Ordinary People Must Also Have AI
+## Point 2: 普通人也必须拥有 AI
+
+**English:**
+
+In Sanders's story, ordinary people often appear in a passive position.
+
+They are workers replaced by AI. Voters manipulated by algorithms. Data sources harvested by platforms. Residents affected by data center electricity costs.
+
+All of that is real.
+
+But ordinary people can also become AI users. That half of the story matters.
+
+AI's most important democratic potential goes beyond efficiency. It lowers the cost of judgment and literacy.
+
+Many capabilities used to be locked behind education, professional networks, consulting fees, language barriers, and technical barriers. To understand a contract, you needed a lawyer. To read financial statements, you needed accounting knowledge. To automate a workflow, you needed programming skill. To learn an industry deeply, you needed mentors and time.
+
+Now an ordinary person can turn AI into a tutor, opposing counsel, research assistant, coding partner, negotiation coach, and fact checker.
+
+AI will hallucinate. It will flatter you. It will miss context.
+
+It cannot replace judgment.
+
+But it can train judgment.
+
+A public that cannot use AI can only be influenced by AI. A public that can use AI has a chance to audit it, argue with it, route around it, and organize against it.
+
+That is why people-first AI matters. It gives people a way to use AI back.
+
+**中文：**
+
+Sanders 的叙事里，普通人经常站在被动位置。
+
+他们是被 AI 替代的工人。被算法操纵的选民。被平台收割的数据源。被数据中心电费外部性影响的社区居民。
+
+这些身份都真实存在。
+
+但普通人也可以成为 AI 的使用者。这一半现实不能丢。
+
+AI 最重要的民主化潜力超过效率。它降低了判断力和见识的获得成本。
+
+过去，很多能力被教育背景、职业网络、咨询费用、语言门槛和技术门槛锁住。想理解合同，要找律师。想看懂财报，要懂会计。想做自动化，要会编程。想系统学习一个行业，要有导师和时间。
+
+现在，一个普通人可以把 AI 变成私人导师、反方辩手、研究助理、代码搭档、谈判教练、事实核查员。
+
+AI 会胡说。会迎合。会漏掉上下文。
+
+它不能替代判断。
+
+但它可以训练判断。
+
+一个不会使用 AI 的公众，只能被 AI 影响。一个会使用 AI 的公众，才有机会审计 AI、反驳 AI、绕过 AI，并组织起来对抗 AI。
+
+这就是 people-first AI 的意义。人也要能反过来使用 AI。
+
+## Point 3: People-First AI Is The Counter-Tool
+## Point 3: People-First AI 才是反击工具
+
+**English:**
+
+Big companies will use AI to maximize profit.
+
+Ordinary people need AI to improve their bargaining power, detection power, and organizing power.
+
+That is the point of people-first AI. It should not be a softer chatbot. It should be sharper.
+
+It can be a contract reviewer for workers, flagging dangerous non-compete terms.
+
+It can be a price detector for consumers, checking whether platforms are personalizing prices against them.
+
+It can be a tenant rights assistant, helping renters understand whether a landlord's terms are legal.
+
+It can be a learning coach for students, pulling high-quality education out of expensive schools and tutoring systems.
+
+It can be a fact-checking system for journalists and citizens, tracing the holes in political ads, deepfake videos, and corporate PR.
+
+It can be an analysis tool for unions and community groups, turning scattered complaints into structured evidence.
+
+The goal is clear: make deception harder, exploitation more expensive, and information asymmetry smaller.
+
+"AI safety" should mean more than building less AI. A better frame is to build AI that is safety-first, public-first, auditable, competitive, and affordable for ordinary people.
+
+That still leaves a hard question: what should regulation do if the pause button is the wrong tool?
+
+**中文：**
+
+大公司会用 AI 最大化利润。
+
+普通人也需要用 AI 提高谈判能力、识别能力和组织能力。
+
+这就是 people-first AI 的意义。它不该只是一个更温柔的聊天机器人。它应该更锋利。
+
+它可以是劳动者的合同审阅器，指出竞业协议里的危险条款。
+
+它可以是消费者的价格侦测器，看出平台有没有对你做个性化加价。
+
+它可以是租客的权益助手，帮你理解房东条款是否合法。
+
+它可以是学生的学习教练，把高质量教育从昂贵学校和补习体系里释放出来。
+
+它可以是记者和公民的事实核查系统，追踪政治广告、深伪视频和企业公关稿里的漏洞。
+
+它可以是工会和社区组织的分析工具，把分散的抱怨变成结构化证据。
+
+这类 AI 的目标很清楚：让欺骗更难，让压榨更贵，让信息不对称更小。
+
+“AI 安全”不该只被理解成少建 AI。更好的理解是：建造安全优先、公众优先、可审计、可竞争、普通人用得起的 AI。
+
+这会留下一个更难的问题：如果暂停键用错了，监管到底应该做什么？
+
+## What Regulation Should Do
+## 监管应该做什么
+
+**English:**
+
+A serious alternative to the pause button still needs regulation.
+
+Sanders's concerns about electricity, privacy, labor replacement, deepfakes, and democratic manipulation all have real foundations. Data centers should not shift unlimited electricity and water costs onto communities. Companies should not train on public data and privatize all the gains. Platforms should not use AI to monitor workers, manipulate consumers, or steer voters.
+
+The policy direction should be clear: limit harm and expand capacity.
+
+For example:
+
+- Charge data centers for real electricity, water, and carbon costs.
+- Require independent audits for high-risk AI systems.
+- Strengthen data rights and privacy protections.
+- Use antitrust policy against vertical bundling across cloud, chips, models, and distribution.
+- Give schools, libraries, community colleges, small businesses, unions, and local governments public compute credits and open-source AI tools.
+- Require large companies that gain major AI productivity benefits to fund retraining, profit sharing, and role transitions.
+- Support open models, explainable tools, and local deployment.
+
+This path is harder. It is also more serious.
+
+Its goal is not to make AI arrive more slowly. Its goal is to prevent AI capability from flowing only to capital.
+
+**中文：**
+
+反对暂停键，不代表支持无监管狂奔。
+
+Sanders 对电力、隐私、劳动替代、深伪和民主操纵的担忧，都有现实基础。数据中心不能无限制地把电费和水资源成本转嫁给社区。企业不能用公共数据训练模型，再把收益全部私有化。平台不能用 AI 监控工人、诱导消费者、操纵选民。
+
+政策方向应该清楚：管住伤害，扩大能力。
 
 比如：
 
-- 对数据中心征收真实的电力、水资源和碳成本，禁止把基础设施成本转嫁给居民。
-- 要求高风险 AI 系统接受独立审计，尤其是招聘、信贷、保险、医疗、教育和执法场景。
-- 强化数据权利和隐私保护，限制平台把用户数据无限制转化为私有模型资产。
+- 对数据中心征收真实的电力、水资源和碳成本。
+- 要求高风险 AI 系统接受独立审计。
+- 强化数据权利和隐私保护。
 - 用反垄断政策限制云、芯片、模型和分发渠道的纵向捆绑。
 - 给学校、图书馆、社区学院、小企业、工会和地方政府提供公共算力券和开源 AI 工具。
 - 要求因 AI 获得重大生产率收益的大企业承担员工再培训、利润分享和转岗责任。
-- 支持开放模型、可解释工具和本地部署，让普通人和小组织不必完全依赖封闭平台。
+- 支持开放模型、可解释工具和本地部署。
 
-这才是更严肃的路线：让 AI 的能力不要只流向资本。
+这条路线更难。但它更认真。
 
-## 先 grill 一下我自己的观点
+目标很清楚：防止 AI 的能力只流向资本。减速本身不够。
 
-当然，我这个立场也有漏洞，不能假装没有。
+## Recap
+## 回到核心
 
-第一，普通人使用 AI，并不自动等于普通人获得权力。一个被平台封装、被广告驱动、被公司控制记忆和接口的 AI，也可能只是更精致的操纵工具。如果 AI 助手本身站在平台那边，它披着助手外衣，实际替平台做销售。
+**English:**
 
-第二，AI 能提高判断力，也能制造自信的幻觉。一个人如果没有基本的证据意识，只会让 AI 替自己生产更多看似有理的偏见。AI 可以是思想磨刀石，也可以是偏见放大器。
+Sanders's warning is worth hearing.
 
-第三，AI 发展确实会造成真实的就业冲击。说“普通人可以学会使用 AI”不能回答所有问题。不是每个被替代的工人都能顺利转型，不是每个社区都能承受产业迁移，不是每个家庭都有时间和资源重新训练自己。
+Technology does not automatically side with ordinary people. Capital will turn every new tool into a profit machine until someone stops it.
 
-第四，开源和普及也会降低坏人的成本。诈骗、深伪、网络攻击、舆论操纵都会因为 AI 变得更便宜。民主化不是单向善，它也会民主化破坏能力。
+But pausing construction is not neutral. In a market where giants already lead, capital is concentrated, and infrastructure is scarce, a pause can freeze monopoly.
 
-这些反驳都成立。但它们推出的结论，不应该是“暂停 AI”，而应该是“更快建出普通人能掌握、能审计、能制衡平台的 AI”。
+The real choice is plain.
 
-如果 AI 注定成为社会的基础设施，关键问题会落到使用权、理解权和监督权上：谁能使用它，谁能理解它，谁能监督它，谁能从它那里拿回一点本来属于自己的力量。
+Will AI belong only to giants, or also to ordinary people?
 
-## 结论：不要把未来让给最坏的人
+Do we wait for big companies to restrain themselves, or build tools that can audit, check, and fight them?
 
-桑德斯的警告值得听。他提醒我们，技术不会自动站在普通人这边。资本会把每一种新工具变成利润机器，除非有人阻止它。
+Does safety mean stopping, or does it mean distributing capability?
 
-但我不同意把主要希望放在暂停建设上。暂停不是中立动作。在一个已经有巨头领先、资本集中、基础设施稀缺的市场里，暂停很可能会冻结垄断，而非削弱垄断。
+I choose the latter.
 
-真正的选择不是“支持 AI 巨头”还是“反对 AI”。真正的选择是：我们是让 AI 只被巨头使用，还是让普通人也获得 AI？我们是等待大公司自我约束，还是建造能审计、制衡、反击大公司的工具？我们是把安全理解为停止，还是理解为把能力分散到更多人手里？
+AI will become power.
+
+Ordinary people should demand more than a slower arrival of power. They should demand some of that power for themselves.
+
+**中文：**
+
+Sanders 的警告值得听。
+
+技术不会自动站在普通人这边。资本会把每一种新工具变成利润机器，直到有人阻止它。
+
+但暂停建设带有方向。在一个巨头领先、资本集中、基础设施稀缺的市场里，暂停很可能冻结垄断。
+
+真正的选择很朴素。
+
+AI 只给巨头用，还是也给普通人用？
+
+我们等待大公司自我约束，还是建造能审计、制衡、反击大公司的工具？
+
+安全意味着停止，还是意味着把能力分散到更多人手里？
 
 我选择后者。
 
-AI 会成为权力。既然如此，普通人不应该只要求权力慢一点到来。普通人应该要求自己也拥有它。
+AI 会成为权力。
+
+普通人不该只要求权力慢一点到来。普通人应该要求自己也拥有它。
 
 ## References
+
+**English:**
+
+- Bernie Sanders, ["AI must work for working families, not just the billionaires who own it."](https://www.sanders.senate.gov/videos/ai-must-work-for-working-families-not-just-the-billionaires-who-own-it/)
+- Sanders and Ocasio-Cortez, ["AI Data Center Moratorium Act,"](https://www.sanders.senate.gov/press-releases/news-sanders-ocasio-cortez-announce-ai-data-center-moratorium-act/) March 25, 2026.
+- U.S. Senate HELP Committee Minority Staff Report, ["The Big Tech Oligarchs' War Against Workers,"](https://www.sanders.senate.gov/wp-content/uploads/10.6.2025-The-Big-Tech-Oligarchs-War-Against-Workers.pdf) October 6, 2025.
+- The Hill, ["Bernie Sanders, labor leaders warn of AI risks for workers,"](https://www.sanders.senate.gov/in-the-news/bernie-sanders-labor-leaders-warn-of-ai-risks-for-workers/) April 17, 2026.
+
+## 参考资料
+
+**中文：**
 
 - Bernie Sanders, ["AI must work for working families, not just the billionaires who own it."](https://www.sanders.senate.gov/videos/ai-must-work-for-working-families-not-just-the-billionaires-who-own-it/)
 - Sanders and Ocasio-Cortez, ["AI Data Center Moratorium Act,"](https://www.sanders.senate.gov/press-releases/news-sanders-ocasio-cortez-announce-ai-data-center-moratorium-act/) March 25, 2026.

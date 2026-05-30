@@ -5,6 +5,11 @@ import rehypeSlug from 'rehype-slug';
 import { articles, type Article } from './data/articles';
 import './styles/App.css';
 
+const getArticleTimestamp = (article: Article) => {
+  const timestamp = Date.parse(article.date);
+  return Number.isNaN(timestamp) ? 0 : timestamp;
+};
+
 const getInitialLocale = (): 'en' | 'cn' => {
   const path = window.location.pathname.toLowerCase();
   const params = new URLSearchParams(window.location.search);
@@ -14,7 +19,7 @@ const getInitialLocale = (): 'en' | 'cn' => {
 
 function App() {
   const [currentArticle, setCurrentArticle] = useState<Article | null>(null);
-  const [locale] = useState<'en' | 'cn'>(getInitialLocale);
+  const [locale, setLocale] = useState<'en' | 'cn'>(getInitialLocale);
   const [activeSlug, setActiveSlug] = useState<string>('');
   const heroRef = useRef<HTMLElement>(null);
   const tocScrollOffset = 84 + 28;
@@ -81,8 +86,7 @@ function App() {
     return () => hero.removeEventListener('wheel', handleWheel);
   }, [currentArticle]);
 
-  const opinions = articles.filter(a => a.category === 'Opinions');
-  const commentaries = articles.filter(a => a.category === 'Commentary');
+  const homepageArticles = [...articles].sort((a, b) => getArticleTimestamp(b) - getArticleTimestamp(a));
 
   const getFilteredMarkdown = (body: string) => {
     const hasLanguageMarkers = body.includes('**English:**') || body.includes('**中文：**');
@@ -137,6 +141,20 @@ function App() {
     window.scrollTo(0, 0);
   };
 
+  const toggleLocale = () => {
+    const nextLocale = locale === 'cn' ? 'en' : 'cn';
+    const url = new URL(window.location.href);
+    if (nextLocale === 'cn') {
+      url.searchParams.set('lang', 'cn');
+    } else {
+      url.searchParams.delete('lang');
+      url.searchParams.delete('locale');
+    }
+    window.history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
+    setLocale(nextLocale);
+    setActiveSlug('');
+  };
+
   const renderArticleCard = (article: Article, index: number) => (
     <div key={article.id} className="article-card" onClick={() => navigateTo(article.id)}>
       <div className="article-number">0{index + 1}</div>
@@ -160,6 +178,14 @@ function App() {
           <div className="logo" onClick={() => navigateTo(null)}>
             The Sean Thesis
           </div>
+          <button
+            className="language-switch"
+            type="button"
+            onClick={toggleLocale}
+            aria-label={locale === 'cn' ? 'Switch to English' : '切换到中文'}
+          >
+            {locale === 'cn' ? 'EN' : '中'}
+          </button>
         </div>
       </nav>
 
@@ -170,16 +196,10 @@ function App() {
               <h1>Logic<br/>& Intent</h1>
               <p>{locale === 'cn' ? 'Sean 论题 • 关于技术与商业的系统性思考' : 'The Sean Thesis • Systemic Thoughts on Technology & Business'}</p>
             </section>
-            {opinions.length > 0 && (
+            {homepageArticles.length > 0 && (
               <div className="category-section">
-                <div className="category-label">{locale === 'cn' ? 'Opinions / 观点' : 'Opinions'}</div>
-                <section className="article-list">{opinions.map((article, idx) => renderArticleCard(article, idx))}</section>
-              </div>
-            )}
-            {commentaries.length > 0 && (
-              <div className="category-section">
-                <div className="category-label">{locale === 'cn' ? 'Commentary / 评论' : 'Commentary'}</div>
-                <section className="article-list">{commentaries.map((article, idx) => renderArticleCard(article, idx))}</section>
+                <div className="category-label">{locale === 'cn' ? 'Articles / 文章' : 'Articles'}</div>
+                <section className="article-list">{homepageArticles.map((article, idx) => renderArticleCard(article, idx))}</section>
               </div>
             )}
           </>

@@ -1,154 +1,351 @@
 ---
 id: "article2-saas-endgame"
-titleEn: "The SaaS Endgame: From Seat-Based to Usage-Based ROI"
-titleZh: "SaaS 的终局：从\"按头收费\"到\"按量结算\"的必经之路"
+titleEn: "The SaaS Endgame: UI Gets Thin, Value Moves Deeper"
+titleZh: "SaaS 的终局：UI 变薄，价值转向更深处"
 category: "Opinions"
 date: "2026-03-29"
 author: "Sean"
 keywords:
   - "SaaS"
-  - "Usage-based Billing"
-  - "ROI"
-  - "SAP"
-  - "Business Models"
+  - "AI SaaS"
+  - "Distribution"
+  - "System of Record"
+  - "Network Effects"
+  - "Vertical AI"
 history:
   - "Sat Mar 28 2026 17:00:00 GMT-0700 (Pacific Daylight Time): Initial release"
+  - "Sat May 30 2026 00:00:00 GMT-0700 (Pacific Daylight Time): Rewritten around AI-era SaaS value capture"
 ---
 
-# The SaaS Endgame: From Seat-Based to Usage-Based ROI
-# SaaS 的终局：从"按头收费"到"按量结算"的必经之路
+# The SaaS Endgame: UI Gets Thin, Value Moves Deeper
+# SaaS 的终局：UI 变薄，价值转向更深处
 
-## The Nightmare Hidden in the Success
-## 藏在成功里的噩梦
+## Context: The SaaS Surface Is Losing Power
+## 背景：SaaS 的表层正在失去力量
 
 **English:**
 
-Picture this: a Fortune 500 company deploys an AI assistant across their sales team. It works. It works so well that 40% of their Salesforce licenses are now logged in once a month, if at all. The AI is doing the prospecting, drafting the follow-ups, updating the CRM fields. The humans are closing deals.
+The old SaaS company won by owning the screen.
 
-Then the CFO calls. She's looking at $8 million in annual Salesforce spend and asking a simple question: "We have 2,000 seats. 800 of them are essentially unused. Why are we paying full price for all of them?"
+The user opened the app. Clicked the dashboard. Filled the form. Moved the record. The UI was the place where work happened, so the UI captured value.
 
-This is not a hypothetical. This is the "SaaS Doom" scenario that every legacy software vendor is quietly terrified of. The product succeeded, and in succeeding, it destroyed the pricing model that funded its own development. When you charge per seat, you are charging for human access to a tool. But when AI does the work, the human accesses the tool less—and suddenly, your best, most AI-enabled customer is also your most economically dangerous customer. Their adoption of AI is a direct attack on your revenue.
+AI changes that.
 
-The lesson is brutal: if your billing unit is the "seat," your growth model is at war with your customers' efficiency.
+An agent can draft the update, summarize the account, fill the ticket, query the database, trigger the workflow, and write back to the system. The user may never open the full app. They may ask from Slack, email, a browser sidebar, or another AI workspace.
+
+That is the problem for SaaS: when UI becomes thin, where does value move?
+
+My view is direct.
+
+Some SaaS will disappear. Thin UI wrapped around generic workflow will get absorbed by AI agents, platforms, or the system of record underneath it.
+
+Some SaaS will become stronger. The winners will own something deeper than the interface: network effects, scale effects, UGC, system of record, vertical domain knowledge, or distribution.
+
+UI still matters. Bad UI still kills adoption. But UI alone is no longer a moat.
 
 **中文：**
 
-想象这样一个场景：一家世界 500 强公司向销售团队部署了 AI 助手。效果很好。好到他们 40% 的 Salesforce 账号现在每月登录一次，甚至完全不登录。AI 在做外呼挖掘、起草跟进邮件、更新 CRM 字段。人类在负责成交。
+旧 SaaS 公司靠拥有屏幕赢。
 
-然后 CFO 打来电话。她盯着每年 800 万美元的 Salesforce 账单，问了一个简单的问题："我们有 2000 个账号，其中 800 个基本上没人用。我们为什么要全价付费？"
+用户打开 app。看 dashboard。填表单。移动 record。工作发生在 UI 里，所以 UI 捕获价值。
 
-这不是假设情景。这就是所有传统软件厂商心里悄悄恐惧的"SaaS 末日"剧本。产品成功了，而恰恰因为它成功了，它摧毁了支撑自身研发的定价模式。当你按"人头"收费，你在为人对工具的访问权收费。但当 AI 代劳了，人访问工具的频率下降了——突然间，你最好的、最全面采用 AI 的客户，也是经济上对你威胁最大的客户。他们拥抱 AI 的每一步，都是在攻击你的收入。
+AI 改变了这一点。
 
-教训很残酷：如果你的计费单位是"人头"，你的增长模型正在与客户的效率为敌。
+Agent 可以写更新，总结 account，填 ticket，查数据库，触发 workflow，再把结果写回系统。用户可能根本不打开完整 app。他可能在 Slack、邮件、浏览器侧边栏，或另一个 AI workspace 里完成工作。
+
+这就是 SaaS 面临的问题：当 UI 变薄，价值会转移到哪里？
+
+我的判断很直接。
+
+一部分 SaaS 会消失。只是在通用 workflow 外面包一层 UI 的产品，会被 AI agent、平台，或底层 system of record 吸收。
+
+另一部分 SaaS 会变强。赢家会拥有比界面更深的东西：网络效应、规模效应、UGC、system of record、vertical domain knowledge，或 distribution。
+
+UI 仍然重要。差 UI 仍然会杀死 adoption。但 UI 本身不再是护城河。
 
 ---
 
-## 1. Why the Per-Seat Model Is Structurally Broken
-## 1. "按人头收费"为何在结构上已然崩塌
+## What Gets Weaker: Thin UI Around Generic Work
+## 会变弱的东西：通用工作的薄 UI
 
 **English:**
 
-The per-seat model made sense in 1999. At that time, software was displacing *paper processes*. More users meant more work was being digitized. The number of seats was a genuine proxy for value: if 50 people were using your CRM, they were genuinely doing 50 people's worth of work in the system.
+The weakest SaaS product in the AI era is a thin interface over a generic task.
 
-AI has severed that link permanently.
+Think of a tool that takes notes, rewrites emails, makes a simple dashboard, routes a basic approval, or wraps a public API with a cleaner screen.
 
-A single AI agent can process 1,000 support tickets in the time a human handles 10. It doesn't need a "seat." It needs tokens and compute. This means the traditional SaaS vendor is facing a conflict of interest that cannot be negotiated away: the vendor wants more logins to grow revenue; the customer wants fewer humans to grow efficiency. These goals are not just misaligned—they are structurally opposed.
+Those products can still be useful. But useful is not the same as defensible.
 
-What makes this crisis existential rather than merely uncomfortable is the math. Legacy SaaS companies built their entire financial models—headcount, R&D investment, go-to-market costs—on the assumption that seat expansion would track business growth. When a major enterprise customer freezes headcount at 500 seats because AI covers the rest, the vendor doesn't lose 50 seats. They lose the *expectation* of 500 more over the next five years. The Net Revenue Retention (NRR) stops expanding, and the entire growth thesis unravels.
+If the task has no proprietary data, no deep workflow, no unique distribution, and no hard domain logic, AI can reproduce it quickly. The base model can add the feature. The platform can bundle it. The system of record can expose it as one more command.
 
-The vendors who survive this transition are the ones who pivot before their CFOs do the math above.
+The user will not ask, "Which app has the prettiest UI?"
+
+The user will ask, "Where is my work already happening?"
+
+That shift moves value away from the surface and toward the place that owns context.
 
 **中文：**
 
-"按人头收费"模式在 1999 年是合理的。那时，软件在替代的是*纸质流程*。用户越多，意味着更多工作被数字化。账号数量是价值的真实代理：如果 50 个人在用你的 CRM，他们确实在系统里完成了 50 个人的工作量。
+AI 时代最弱的 SaaS，是包在通用任务外面的一层薄界面。
 
-AI 已经永久地切断了这条链接。
+比如记笔记、改邮件、做简单 dashboard、跑基础审批、把公共 API 包成更好看的页面。
 
-一个 AI 智能体处理 1000 张工单的时间，一个人类只能处理 10 张。它不需要"账号"，它需要 Token 和算力。这意味着传统 SaaS 厂商面临着一个无法谈判解决的利益冲突：厂商想要更多登录来增长收入；客户想要更少的人来提升效率。这两个目标不只是不一致——它们在结构上是对立的。
+这些产品仍然可能有用。但有用不等于可防守。
 
-让这场危机成为"存亡级别"而不只是"令人不舒服"的，是背后的数学逻辑。传统 SaaS 公司把整个财务模型——人员规模、研发投入、市场开拓成本——都建立在一个假设上：账号扩张会随着业务增长而增长。当一家大型企业客户因为 AI 覆盖了剩余工作量而把账号冻结在 500 个，厂商失去的不是 50 个账号，而是未来五年*预期*新增的 500 个账号。净收入留存率（NRR）停止扩张，整个增长逻辑随之崩塌。
+如果任务没有私有数据，没有深工作流，没有独特分发，也没有困难的行业逻辑，AI 很快能复刻它。基础模型可以加这个功能。平台可以打包它。system of record 可以把它变成一个 command。
 
-能活过这场转型的厂商，是在客户 CFO 算完上面那笔账之前，就已经完成自我颠覆的那些。
+用户不会问：“哪个 app 的 UI 最漂亮？”
+
+用户会问：“我的工作本来在哪里发生？”
+
+这个变化会把价值从表层移走，推向真正拥有 context 的地方。
 
 ---
 
-## 2. SAP's Painful Lesson: From Licenses to Outcomes
-## 2. SAP 的阵痛课：从许可证到结果
+## 1. System Of Record: AI Needs A Source Of Truth
+## 1. System Of Record：AI 需要事实源
 
 **English:**
 
-SAP is perhaps the most instructive case study in this transition, because they are both the most at risk and the most aggressive in pivoting.
+The first place value moves is the system of record.
 
-SAP's legacy business is built on "on-premise licenses"—you pay a large upfront fee to "own" the software, then annual maintenance fees to keep it updated. For decades, this model printed money. Enterprise software was complex, sticky, and expensive to replace. The moat was lock-in.
+A system of record is where the company keeps the canonical version of work: customers, contracts, employees, tickets, invoices, inventory, code, incidents, policies, audit logs.
 
-But their new Business Technology Platform (BTP) and the "Full Usage Equivalent" (FUE) metric represent a fundamentally different philosophy. Instead of charging for *access to functionality*, they're moving toward charging for *consumption of outcomes*. If their software automates a procurement workflow, they want to capture a slice of every transaction that workflow processes—not the number of employees who can log in to configure it.
+AI increases the importance of this layer.
 
-The transition is painful for a specific reason: it requires SAP to bet against their own installed base. Every on-premise customer who converts to BTP consumption is a customer who traded a predictable, large license fee for a variable, potentially smaller but more justified bill. In the short term, that is revenue compression. In the long term, it's the only way to stay relevant in an enterprise landscape where AI is eliminating the human headcount that made per-seat pricing defensible.
+An agent can answer a question only if it knows which data is true. It can take action only if it has permission. It can automate work only if it can write the result back somewhere trusted.
 
-The companies that execute this pivot cleanly—convincing customers that variable billing aligned with ROI is *better* than fixed billing regardless of use—will own the next decade of enterprise software.
+That is why CRM, ERP, HRIS, ITSM, billing, observability, security, and industry-specific record systems still matter.
+
+The UI on top may change. The command surface may move into chat. But the trusted record, permission model, workflow history, and audit trail become more valuable.
+
+In the old world, the app was where the user clicked.
+
+In the AI world, the system of record is where the agent must verify, act, and remember.
 
 **中文：**
 
-SAP 或许是这场转型中最具参考价值的案例，因为他们既是风险最高的，也是转型最激进的。
+价值转移的第一个地方，是 system of record。
 
-SAP 的传统业务建立在"本地许可证"上——你支付一笔高额的前期费用来"拥有"软件，再支付年度维保费用来保持更新。几十年来，这个模式是印钞机。企业软件复杂、粘性高、替换成本极高。护城河来自锁定效应。
+System of record 是公司保存标准事实的地方：客户、合同、员工、ticket、invoice、库存、代码、incident、policy、audit log。
 
-但他们新的业务技术平台（BTP）和"全使用当量（FUE）"指标，代表了一种根本不同的哲学。他们不再为*功能的访问权*收费，而是在向*结果的消耗*收费。如果他们的软件自动化了一个采购工作流，他们想要从该工作流处理的每一笔交易中分一杯羹——而不是从有多少员工能登录配置它来计费。
+AI 会提高这一层的重要性。
 
-这个转型痛苦，有一个具体的原因：它要求 SAP 与自己的存量客户群对赌。每一个从本地许可证转向 BTP 消耗计费的客户，都是把一笔可预期的大额许可费，换成了一笔可变的、可能更小但更合理的账单。短期内，这是收入压缩。长期看，这是在企业 AI 消灭了让按头收费具备合理性的那批人员之后，保持相关性的唯一路径。
+Agent 要回答问题，必须知道哪份数据是真的。Agent 要执行动作，必须有权限。Agent 要自动化工作，必须把结果写回一个可信系统。
 
-那些能够干净执行这一转型的公司——说服客户：与 ROI 挂钩的弹性计费，*优于*不论是否使用的固定计费——将主导未来十年的企业软件市场。
+所以 CRM、ERP、HRIS、ITSM、billing、observability、security，以及各行业自己的 record system 仍然重要。
+
+上面的 UI 可能改变。命令入口可能进入 chat。但可信 record、权限模型、workflow history 和 audit trail 会变得更值钱。
+
+旧世界里，app 是用户点击的地方。
+
+AI 世界里，system of record 是 agent 核对事实、执行动作、保存记忆的地方。
 
 ---
 
-## 3. The "Bill Shock" Problem: Psychology Over Pricing
-## 3. "账单刺客"难题：心理学，而非定价学
+## 2. Network Effects And UGC: The Product Gets Smarter With Use
+## 2. 网络效应和 UGC：产品越用越强
 
 **English:**
 
-Usage-based billing has one serious enemy: human psychology.
+The second place value moves is networked knowledge.
 
-The moment an employee believes that every action they take has a direct, visible cost, they stop acting. They don't click "generate summary" if they think it costs $2. They don't ask the AI assistant for a second opinion if they think it adds to the bill. The tool becomes a liability instead of a resource, and adoption collapses.
+Slack is a good example.
 
-This is the "Bill Shock" problem. And it's not irrational. The employee's incentive is to minimize their departmental cost, even if the AI action would generate ten times the value it costs. Individual cost-aversion is perfectly rational—it's just catastrophic for vendor growth.
+Slack is company memory. The chat UI is only the entry point. Channels contain decisions, mistakes, customer context, product history, incident traces, files, and informal explanations that never make it into docs.
 
-Snowflake solved this elegantly, and their NRR above 130% is the proof. The key wasn't lower prices or complex discounts. It was **structural predictability**: prepaid credit pools and departmental budget caps. A manager buys $50,000 of Snowflake credits at the start of the quarter and allocates them to teams. The team uses what they need—up to the cap. There are no surprises. Individuals don't see per-query costs; they see team budget utilization. The psychology shifts from "every click costs money" to "we have a budget, let's use it well."
+The more a team uses Slack, the more Slack understands how the company works. AI search, channel recaps, thread summaries, and agent integrations make that history easier to use.
 
-This is how usage-based billing works in practice: not by making every action feel expensive, but by giving the *manager* a ceiling they can trust, so their team can act without hesitation. The vendor captures more value because usage expands when anxiety is removed. The customer gets a bill that tracks ROI. When it works, NRR isn't a metric—it's a signal that the vendor and customer are genuinely aligned.
+That is why Slack can get stronger with AI. AI turns messy communication into retrievable organizational memory.
+
+Reddit shows the public version.
+
+Reddit owns a huge corpus of user-generated discussion. It is current, messy, opinionated, and full of niche human judgment. That kind of UGC is valuable to AI because it captures how real people describe real problems.
+
+Reddit's data partnerships with Google and OpenAI make the point clear: AI companies want access to real-time, structured, unique content.
+
+The pattern is simple.
+
+If users create context while using the product, AI can make that context more useful. That creates a stronger loop: more usage creates more data, more data improves AI utility, better AI utility attracts more usage.
 
 **中文：**
 
-按量付费有一个严肃的敌人：人类心理。
+价值转移的第二个地方，是网络化知识。
 
-一旦员工相信自己的每一个操作都有直接的、可见的成本，他们就会停止行动。如果他们觉得"生成摘要"要花 2 美元，他们就不会点这个按钮。如果他们觉得让 AI 助手给出第二意见会增加账单，他们就不会问。工具从资源变成了负担，使用率随之崩塌。
+Slack 是一个好例子。
 
-这就是"账单刺客"难题。而且这不是非理性的。员工的激励是最小化部门成本，即使 AI 操作产生的价值是成本的十倍。个人的成本规避是完全理性的——只是对厂商增长而言是灾难性的。
+Slack 是公司记忆。聊天 UI 只是入口。Channel 里有决策、错误、客户 context、产品历史、incident 痕迹、文件，以及很多永远不会进入正式文档的解释。
 
-Snowflake 优雅地解决了这个问题，超过 130% 的 NRR 就是证明。关键不在于更低的价格或复杂的折扣，而在于**结构性的可预期性**：预付费积分池和部门用量预算上限。一名经理在季度初购买 5 万美元的 Snowflake 积分并分配给各团队。团队在上限内按需使用，没有意外。个人看不到每条查询的费用，他们看到的是团队预算使用率。心理账户从"每次点击都在花钱"转变为"我们有一个预算，用好它"。
+团队越用 Slack，Slack 越理解这家公司如何运转。AI search、channel recap、thread summary 和 agent integration，会让这些历史更容易被使用。
 
-这才是按量付费在实践中的运作方式：不是让每一个操作都感觉很贵，而是给*管理者*一个他们可以信任的上限，让他们的团队能毫无顾虑地行动。焦虑一旦消除，使用量就会扩大，厂商随之获得更多价值。客户拿到一张与 ROI 挂钩的账单。当它运转良好时，NRR 不只是一个数字——它是厂商与客户真正站在同一边的信号。
+所以 Slack 可能在 AI 时代变得更强。AI 把混乱沟通变成可检索的组织记忆。
+
+Reddit 展示的是公开网络版本。
+
+Reddit 拥有巨大的用户生成讨论语料。它实时、混乱、有观点，而且充满细分场景下的人类判断。这类 UGC 对 AI 很有价值，因为它记录了真实的人如何描述真实的问题。
+
+Reddit 和 Google、OpenAI 的数据合作说明了这一点：AI 公司想要实时、结构化、独特的内容。
+
+模式很简单。
+
+如果用户在使用产品时创造 context，AI 就能让这些 context 更有用。循环会变强：更多使用产生更多数据，更多数据提高 AI 效用，更好的 AI 效用吸引更多使用。
 
 ---
 
-## Conclusion: The Software That Shares Your Risk
-## 总结：与你共担风险的软件
+## 3. Vertical Domain Knowledge: Generic AI Still Needs A Map
+## 3. Vertical Domain Knowledge：通用 AI 仍然需要地图
 
 **English:**
 
-The shift from seat-based to usage-based billing is not a pricing decision. It is a statement about what software fundamentally *is*.
+The third place value moves is vertical domain knowledge.
 
-A seat-based vendor is selling access. A usage-based vendor is selling participation in an outcome. The first vendor gets paid whether or not you succeed. The second vendor's revenue rises when yours does.
+Generic AI can write a decent first draft. It can explain general rules. It can imitate a workflow. But real industries are full of edge cases.
 
-In an era where AI is the lever of productivity and AI's consumption is the natural unit of value, the usage-based model is not an option—it is the only honest structure. The question for every software company isn't whether to make this transition, but whether they have the financial courage to make it before their best customers force it on them.
+Healthcare claims. Construction change orders. Insurance underwriting. Restaurant operations. Logistics exceptions. Financial compliance. Clinical documentation. Government procurement.
 
-The next generation of enterprise SaaS will look more like a utility than a license: you pay for what you use, you budget for what you need, and the vendor's incentives are aligned with your outcomes. That is not a worse deal for the vendor. For those who execute it well, it is the best deal they have ever offered—because it is the only one their customers will keep paying for.
+Each domain has strange terms, hidden constraints, approval paths, compliance rules, seasonal patterns, and exceptions that only practitioners understand.
+
+Strong vertical SaaS already encodes that knowledge.
+
+It knows which fields matter. Which workflow step cannot be skipped. Which exception is normal. Which document needs review. Which approval path will fail. Which metric actually predicts risk.
+
+AI makes this knowledge more valuable because it can turn domain judgment into action. The model can draft, classify, route, summarize, and recommend. But the vertical SaaS system tells it what matters and what must happen next.
+
+A label like "AI for industry X" is weak.
+
+The defensible product is a working map of industry X.
 
 **中文：**
 
-从按人头到按量付费的转变，不是定价决策，而是关于软件从根本上*是什么*的声明。
+价值转移的第三个地方，是 vertical domain knowledge。
 
-按人头计费的厂商，卖的是访问权。按量计费的厂商，卖的是对结果的参与。前者不论你是否成功都能收到钱，后者的收入随着你的成功而增长。
+通用 AI 可以写出不错的第一版。可以解释通用规则。可以模仿一个 workflow。但真实行业里到处都是边界情况。
 
-在 AI 是生产力杠杆、AI 的消耗是价值天然单位的时代，按量付费不是一个选项——它是唯一诚实的结构。对每一家软件公司来说，问题不是是否要完成这个转型，而是他们是否有足够的财务勇气，在最好的客户强迫他们转之前，主动完成这一步。
+医疗理赔。建筑变更单。保险核保。餐厅运营。物流异常。金融合规。临床文档。政府采购。
 
-下一代企业 SaaS 看起来会更像公用事业，而不是许可证：你为你使用的付费，你为你需要的做预算，厂商的激励与你的结果保持一致。这对厂商来说不是更差的交易。对那些执行到位的厂商，这是他们历史上提供过的最好的交易——因为这是客户唯一愿意持续付钱的那一种。
+每个行业都有奇怪术语、隐藏约束、审批路径、合规规则、季节性模式，以及只有从业者懂的例外。
+
+强 vertical SaaS 本来就编码了这些知识。
+
+它知道哪些字段重要。哪个 workflow step 不能跳。哪个 exception 是正常的。哪份文档需要 review。哪条审批路径会失败。哪个指标真的能预测风险。
+
+AI 会让这些知识更值钱，因为它能把行业判断变成行动。模型可以起草、分类、路由、总结、推荐。但 vertical SaaS system 会告诉它什么重要，以及下一步必须做什么。
+
+“AI for industry X” 这种标签很弱。
+
+可防守的产品，是一张能运行的行业地图。
+
+---
+
+## 4. Distribution And Deployment: The Last Mile Becomes The Moat
+## 4. Distribution And Deployment：最后一公里变成护城河
+
+**English:**
+
+The fourth place value moves is distribution.
+
+When the UI was the product, distribution meant getting people to sign up and log in.
+
+In AI-native SaaS, distribution means something deeper: getting AI into the actual workflow, with trust, permissions, integrations, training, and change management.
+
+That is why deployment companies matter.
+
+AI does not deploy itself. A model demo can look magical and still fail inside a real company. The data is messy. Permissions are unclear. Teams disagree on process. Legal wants auditability. Security wants control. Users do not trust the output. Managers do not know how to measure ROI.
+
+The company that owns deployment owns the last mile of value.
+
+This is a distribution advantage. The services motion is the entry point. The deployment layer learns where the product breaks, which integrations matter, which users resist, and which workflow actually creates value. That knowledge feeds back into product.
+
+In the AI era, the winner may be someone other than the company with the prettiest app.
+
+The winner may be the company that can get useful AI adopted inside a messy enterprise.
+
+**中文：**
+
+价值转移的第四个地方，是 distribution。
+
+当 UI 是产品时，distribution 意味着让人注册、登录、使用。
+
+在 AI-native SaaS 里，distribution 更深：把 AI 放进真实 workflow，带着信任、权限、集成、培训和 change management 一起落地。
+
+这就是为什么会出现 deployment company。
+
+AI 不会自己部署自己。模型 demo 可以很惊艳，但进入真实公司后仍然失败。数据很乱。权限不清。团队对流程有分歧。Legal 要 auditability。Security 要 control。用户不信输出。Manager 不知道怎么衡量 ROI。
+
+谁拥有 deployment，谁就拥有价值最后一公里。
+
+这是一种 distribution advantage。服务动作只是入口。Deployment layer 会知道产品在哪里断，哪些 integration 重要，哪些用户抗拒，哪个 workflow 真正创造价值。这些知识会反哺产品。
+
+AI 时代，最漂亮的 app 未必赢。
+
+赢家可能是最能把有用 AI 部署进混乱企业的人。
+
+---
+
+## Recap: SaaS Does Not Die Evenly
+## 回到核心：SaaS 不会一起死亡
+
+**English:**
+
+The lazy version of the argument says SaaS is dead.
+
+That is too simple.
+
+UI-only SaaS is in trouble. Generic workflow SaaS is in trouble. Products without data, workflow, domain knowledge, or distribution will get compressed.
+
+But SaaS with deeper value can become stronger.
+
+System of record becomes the source of truth for AI.
+
+Networked products become organizational memory.
+
+UGC platforms become training and retrieval assets.
+
+Vertical SaaS becomes the map that lets AI act safely in a domain.
+
+Deployment-led companies become the bridge between model capability and real adoption.
+
+The value does not disappear.
+
+It moves deeper.
+
+**中文：**
+
+懒惰版本的结论是：SaaS 死了。
+
+这太简单。
+
+只靠 UI 的 SaaS 会很危险。通用 workflow SaaS 会很危险。不拥有数据、工作流、行业知识或分发能力的产品，会被压缩。
+
+但拥有更深价值的 SaaS 会变强。
+
+System of record 会成为 AI 的事实源。
+
+网络型产品会成为组织记忆。
+
+UGC 平台会成为训练和检索资产。
+
+Vertical SaaS 会成为 AI 在行业里安全行动的地图。
+
+Deployment-led company 会成为模型能力和真实 adoption 之间的桥。
+
+价值不会消失。
+
+它会转移到更深处。
+
+## References
+## 参考资料
+
+**English:**
+
+- Salesforce, ["Salesforce Launches Trusted Generative AI for Customers in Slack"](https://www.salesforce.com/news/stories/slack-ai-news/slack-ai_search-2/), February 14, 2024.
+- Slack Help Center, ["Guide to AI features in Slack"](https://slack.com/help/articles/25076892548883-Guide-to-AI-features-in-Slack).
+- OpenAI, ["OpenAI and Reddit Partnership"](https://openai.com/index/openai-and-reddit-partnership/), May 16, 2024.
+- Google, ["Google expands partnership with Reddit"](https://blog.google/inside-google/company-announcements/expanded-reddit-partnership/), February 22, 2024.
+
+**中文：**
+
+- Salesforce, ["Salesforce Launches Trusted Generative AI for Customers in Slack"](https://www.salesforce.com/news/stories/slack-ai-news/slack-ai_search-2/), February 14, 2024.
+- Slack Help Center, ["Guide to AI features in Slack"](https://slack.com/help/articles/25076892548883-Guide-to-AI-features-in-Slack).
+- OpenAI, ["OpenAI and Reddit Partnership"](https://openai.com/index/openai-and-reddit-partnership/), May 16, 2024.
+- Google, ["Google expands partnership with Reddit"](https://blog.google/inside-google/company-announcements/expanded-reddit-partnership/), February 22, 2024.
