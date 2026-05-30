@@ -141,6 +141,9 @@ function App() {
     window.scrollTo(0, 0);
   };
 
+  const renderDraftTag = (article: Article) =>
+    article.release === 'draft' ? <span className="draft-tag">Draft</span> : null;
+
   const toggleLocale = () => {
     const nextLocale = locale === 'cn' ? 'en' : 'cn';
     const url = new URL(window.location.href);
@@ -161,6 +164,7 @@ function App() {
       <div className="article-info">
         <h2>{locale === 'cn' ? article.titleZh : article.titleEn}</h2>
         <div className="card-meta">
+          {renderDraftTag(article)}
           <span>{article.date}</span> • <span>{article.keywords.slice(0, 3).join(', ')}</span>
         </div>
       </div>
@@ -217,7 +221,10 @@ function App() {
                   <div className="meta-item"><div className="meta-label">Keywords</div><div className="meta-value">{currentArticle.keywords.join(', ')}</div></div>
                 )}
               </div>
-              <h1>{locale === 'cn' ? currentArticle.titleZh : currentArticle.titleEn}</h1>
+              <div className="article-title-block">
+                {renderDraftTag(currentArticle)}
+                <h1>{locale === 'cn' ? currentArticle.titleZh : currentArticle.titleEn}</h1>
+              </div>
               <div className="md-content">
                 <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeSlug]}>
                   {filteredContent}

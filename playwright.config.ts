@@ -14,7 +14,7 @@ export default defineConfig({
     { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
   ],
   webServer: {
-    command: '/Users/xichaochen/.nvm/versions/node/v22.13.1/bin/npm run dev',
+    command: process.env.PLAYWRIGHT_WEB_SERVER_COMMAND ?? 'npm run dev',
     url: 'http://localhost:5173',
     reuseExistingServer: true,
     timeout: 30000,

@@ -199,11 +199,31 @@ main {
 }
 
 .card-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
   font-family: var(--font-mono);
   font-size: 0.66rem;
   line-height: 1.35;
   letter-spacing: 0.05rem;
   color: var(--secondary-text);
+  text-transform: uppercase;
+}
+
+.draft-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.35rem;
+  padding: 0.12rem 0.45rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  color: var(--text-color);
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.08rem;
   text-transform: uppercase;
 }
 
@@ -399,13 +419,20 @@ main {
   letter-spacing: 0.05rem;
 }
 
+.article-title-block {
+  margin-bottom: 6rem;
+}
+
+.article-title-block .draft-tag {
+  margin-bottom: 1.25rem;
+}
+
 .article-view h1 {
   font-family: var(--font-vogue);
   font-size: 4.5rem;
   font-weight: 900;
   line-height: 0.95;
   letter-spacing: -0.08rem;
-  margin-bottom: 6rem;
 }
 
 /* --- Markdown Typography --- */
@@ -534,7 +561,6 @@ footer {
   .article-view h1 {
     font-size: 4.5rem;
     letter-spacing: -0.15rem;
-    margin-bottom: 6rem;
   }
 
   .article-metadata-shelf {
@@ -675,8 +701,11 @@ footer {
   .article-view h1 {
     font-size: clamp(2.5rem, 9vw, 4rem);
     letter-spacing: -0.1rem;
-    margin-bottom: 4rem;
     line-height: 0.9;
+  }
+
+  .article-title-block {
+    margin-bottom: 4rem;
   }
 
   .md-content {

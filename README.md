@@ -41,7 +41,7 @@ npm run sync
 
 By default, the sync script reads from `content/articles`. To sync directly from an Obsidian vault folder:
 ```bash
-OBSIDIAN_ARTICLES_DIR="/Users/xichaochen/Documents/Obsidian Vault/文章" npm run sync
+OBSIDIAN_ARTICLES_DIR="$HOME/Documents/Obsidian Vault/文章" npm run sync
 ```
 
 ### Checks
