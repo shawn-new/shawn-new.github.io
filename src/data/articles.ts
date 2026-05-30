@@ -5,6 +5,7 @@ export interface Article {
   category: 'Opinions' | 'Commentary';
   date: string;
   author: string;
+  release: 'published' | 'draft';
   keywords: string[];
   history: string[];
   body: string;
@@ -18,6 +19,7 @@ export const articles: Article[] = [
     "category": "Opinions",
     "date": "2026-05-30",
     "author": "Sean",
+    "release": "published",
     "keywords": [
       "Middle Management",
       "AI Management",
@@ -40,6 +42,7 @@ export const articles: Article[] = [
     "category": "Opinions",
     "date": "2026-05-30",
     "author": "Sean",
+    "release": "published",
     "keywords": [
       "AI Era",
       "Taste",
@@ -61,6 +64,7 @@ export const articles: Article[] = [
     "category": "Commentary",
     "date": "2026-05-30",
     "author": "Sean",
+    "release": "published",
     "keywords": [
       "AI Regulation",
       "AI Safety",
@@ -81,6 +85,7 @@ export const articles: Article[] = [
     "category": "Commentary",
     "date": "2026-05-25",
     "author": "Sean",
+    "release": "published",
     "keywords": [
       "Bernie Sanders",
       "AI Moratorium",
@@ -101,6 +106,7 @@ export const articles: Article[] = [
     "category": "Opinions",
     "date": "2026-03-29",
     "author": "Sean",
+    "release": "published",
     "keywords": [
       "Engineering Binary",
       "Product vs Infrastructure",
@@ -122,6 +128,7 @@ export const articles: Article[] = [
     "category": "Opinions",
     "date": "2026-03-29",
     "author": "Sean",
+    "release": "published",
     "keywords": [
       "SaaS",
       "AI SaaS",
@@ -144,6 +151,7 @@ export const articles: Article[] = [
     "category": "Opinions",
     "date": "2026-03-29",
     "author": "Sean",
+    "release": "published",
     "keywords": [
       "AI Moat",
       "Unique Data",

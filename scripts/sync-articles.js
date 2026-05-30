@@ -32,6 +32,8 @@ const formatHistory = (value = []) =>
     return String(item);
   });
 
+const formatRelease = (value) => (value === 'draft' ? 'draft' : 'published');
+
 const toArticle = (filename) => {
   const filePath = path.join(sourceDir, filename);
   const fileContent = fs.readFileSync(filePath, 'utf8');
@@ -49,6 +51,7 @@ const toArticle = (filename) => {
     category: data.category || 'Opinions',
     date: formatDate(data.date),
     author: data.author || 'Sean',
+    release: formatRelease(data.release),
     keywords: data.keywords || [],
     history: formatHistory(data.history),
     body,
@@ -67,6 +70,7 @@ const articleFiles = fs
 
 const articles = articleFiles
   .map(toArticle)
+  .filter((article) => article.release !== 'draft')
   .sort((a, b) => dateTimestamp(b) - dateTimestamp(a) || a.id.localeCompare(b.id));
 
 const fileContent = `export interface Article {
@@ -76,6 +80,7 @@ const fileContent = `export interface Article {
   category: 'Opinions' | 'Commentary';
   date: string;
   author: string;
+  release: 'published' | 'draft';
   keywords: string[];
   history: string[];
   body: string;
