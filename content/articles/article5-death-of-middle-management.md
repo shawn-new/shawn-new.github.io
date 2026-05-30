@@ -5,6 +5,7 @@ titleZh: "中层管理的死亡：每个人都要成为 TLM"
 category: "Opinions"
 date: "2026-05-30"
 author: "Sean"
+release: "published"
 keywords:
   - "Middle Management"
   - "AI Management"

@@ -20,6 +20,7 @@ titleZh: 示例中文标题
 category: Commentary
 date: 2026-05-17
 author: Sean
+release: published
 keywords:
   - Test
   - Sync
@@ -53,6 +54,7 @@ Line one.\\n\\nLine two.
   const generated = readFileSync(targetFile, 'utf8');
   assert.match(generated, /"id": "sample-article"/);
   assert.match(generated, /"category": "Commentary"/);
+  assert.match(generated, /"release": "published"/);
   assert.match(generated, /"history": \[\s+"2026-05-17: Initial import"\s+\]/);
   assert.ok(generated.includes('Line one.\\n\\nLine two'));
   assert.ok(!generated.includes('Line one.\\\\n\\\\nLine two'));
@@ -117,4 +119,109 @@ Newer body.
   assert.ok(
     generated.indexOf('"id": "newer"') < generated.indexOf('"id": "older"'),
   );
+});
+
+test('sync script omits draft articles from generated app data', () => {
+  const tempRoot = mkdtempSync(join(tmpdir(), 'ai-native-blog-sync-release-'));
+  const sourceDir = join(tempRoot, 'articles');
+  const targetFile = join(tempRoot, 'articles.ts');
+
+  execFileSync('mkdir', ['-p', sourceDir]);
+  writeFileSync(
+    join(sourceDir, 'published.md'),
+    `---
+id: published
+titleEn: Published
+titleZh: 已发布
+category: Opinions
+date: 2026-05-30
+author: Sean
+release: published
+keywords: []
+history: []
+---
+
+# Published
+# 已发布
+
+Published body.
+`,
+  );
+  writeFileSync(
+    join(sourceDir, 'draft.md'),
+    `---
+id: draft
+titleEn: Draft
+titleZh: 草稿
+category: Opinions
+date: 2026-05-31
+author: Sean
+release: draft
+keywords: []
+history: []
+---
+
+# Draft
+# 草稿
+
+Draft body.
+`,
+  );
+
+  execFileSync('node', ['scripts/sync-articles.js'], {
+    cwd: process.cwd(),
+    env: {
+      ...process.env,
+      ARTICLES_DIR: sourceDir,
+      ARTICLES_TARGET_FILE: targetFile,
+    },
+    stdio: 'pipe',
+  });
+
+  const generated = readFileSync(targetFile, 'utf8');
+  assert.match(generated, /"id": "published"/);
+  assert.doesNotMatch(generated, /"id": "draft"/);
+});
+
+test('sync script includes draft articles when explicitly requested', () => {
+  const tempRoot = mkdtempSync(join(tmpdir(), 'ai-native-blog-sync-drafts-'));
+  const sourceDir = join(tempRoot, 'articles');
+  const targetFile = join(tempRoot, 'articles.ts');
+
+  execFileSync('mkdir', ['-p', sourceDir]);
+  writeFileSync(
+    join(sourceDir, 'draft.md'),
+    `---
+id: draft
+titleEn: Draft
+titleZh: 草稿
+category: Commentary
+date: 2026-05-30
+author: Sean
+release: draft
+keywords: []
+history: []
+---
+
+# Draft
+# 草稿
+
+Draft body.
+`,
+  );
+
+  execFileSync('node', ['scripts/sync-articles.js'], {
+    cwd: process.cwd(),
+    env: {
+      ...process.env,
+      ARTICLES_DIR: sourceDir,
+      ARTICLES_TARGET_FILE: targetFile,
+      INCLUDE_DRAFTS: 'true',
+    },
+    stdio: 'pipe',
+  });
+
+  const generated = readFileSync(targetFile, 'utf8');
+  assert.match(generated, /"id": "draft"/);
+  assert.match(generated, /"release": "draft"/);
 });

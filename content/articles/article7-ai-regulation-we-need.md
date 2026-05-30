@@ -5,6 +5,7 @@ titleZh: "我们真正需要的 AI 监管"
 category: "Commentary"
 date: "2026-05-30"
 author: "Sean"
+release: "draft"
 keywords:
   - "AI Regulation"
   - "AI Safety"

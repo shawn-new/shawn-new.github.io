@@ -10,6 +10,7 @@ const sourceDir =
 const targetFile =
   process.env.ARTICLES_TARGET_FILE ||
   path.join(process.cwd(), 'src/data/articles.ts');
+const includeDrafts = process.env.INCLUDE_DRAFTS === 'true';
 
 const normalizeBody = (content) => content.trim().replace(/\\n/g, '\n');
 
@@ -70,7 +71,7 @@ const articleFiles = fs
 
 const articles = articleFiles
   .map(toArticle)
-  .filter((article) => article.release !== 'draft')
+  .filter((article) => includeDrafts || article.release !== 'draft')
   .sort((a, b) => dateTimestamp(b) - dateTimestamp(a) || a.id.localeCompare(b.id));
 
 const fileContent = `export interface Article {
@@ -90,4 +91,6 @@ export const articles: Article[] = ${JSON.stringify(articles, null, 2)};
 `;
 
 fs.writeFileSync(targetFile, fileContent);
-console.log(`Synced ${articles.length} article(s) from ${sourceDir}.`);
+console.log(
+  `Synced ${articles.length} article(s) from ${sourceDir}${includeDrafts ? ' including drafts' : ''}.`,
+);

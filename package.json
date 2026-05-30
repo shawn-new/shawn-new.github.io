@@ -7,17 +7,19 @@
     "node": "22.x"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "INCLUDE_DRAFTS=true npm run sync && vite",
+    "build": "npm run sync && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "security:precommit": "node scripts/security-review-precommit.mjs",
+    "security:review": "node scripts/security-review-precommit.mjs --all",
     "test:unit": "node --test tests/sync-articles.test.mjs",
     "test:selenium": "node --test tests/*.selenium.test.mjs",
     "test": "npm run test:unit && playwright test && npm run test:selenium",
     "sync": "node scripts/sync-articles.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "sync-deploy": "npm run sync && npm run deploy"
+    "sync-deploy": "npm run build && npm run deploy"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

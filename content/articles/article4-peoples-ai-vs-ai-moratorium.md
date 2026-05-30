@@ -5,6 +5,7 @@ titleZh: "反对 AI 暂停键：普通人的 AI 必须被建造出来"
 category: "Commentary"
 date: "2026-05-25"
 author: "Sean"
+release: "published"
 keywords:
   - "Bernie Sanders"
   - "AI Moratorium"

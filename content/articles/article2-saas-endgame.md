@@ -5,6 +5,7 @@ titleZh: "SaaS 的终局：UI 变薄，价值转向更深处"
 category: "Opinions"
 date: "2026-03-29"
 author: "Sean"
+release: "published"
 keywords:
   - "SaaS"
   - "AI SaaS"

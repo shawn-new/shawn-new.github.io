@@ -5,6 +5,7 @@ titleZh: "工程师的二元演变：产品、基座与 FDE 的桥梁"
 category: "Opinions"
 date: "2026-03-29"
 author: "Sean"
+release: "published"
 keywords:
   - "Engineering Binary"
   - "Product vs Infrastructure"

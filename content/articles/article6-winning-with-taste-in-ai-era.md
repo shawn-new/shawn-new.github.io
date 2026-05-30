@@ -5,6 +5,7 @@ titleZh: "AI 时代如何赢：关键是 Taste"
 category: "Opinions"
 date: "2026-05-30"
 author: "Sean"
+release: "published"
 keywords:
   - "AI Era"
   - "Taste"
