@@ -14,9 +14,7 @@ dist-ssr
 
 # Local workspace artifacts
 .codex-notes/
-.githooks/
 CONTEXT.md
-scripts/
 
 # Editor directories and files
 .vscode/*
