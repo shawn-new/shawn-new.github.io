@@ -57,11 +57,8 @@ npm run test:selenium
 ```
 
 ### Deployment to GitHub Pages
-1. Ensure `vite.config.ts` has the correct `base` path (default: `/ai-native-blog/`).
-2. Run the deployment script:
-```bash
-npm run deploy
-```
+Push to `master` to trigger the GitHub Actions workflow in `.github/workflows/deploy.yml`.
+The workflow runs lint, unit tests, builds the Vite app, and deploys `dist` to GitHub Pages.
 
 ## 🔒 Security & Privacy
 This is a static-only SPA. It contains no server-side logic, secrets, or tracking. Content is pre-rendered for maximum performance and security.
