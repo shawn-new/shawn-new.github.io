@@ -323,6 +323,18 @@ When should it be deterministic?
 
 When should it let the user steer?
 
+Which eval should come first?
+
+That sounds like a technical question, but it is often a taste question.
+
+A weak team starts by building the platform. A stronger team asks: what is the starter use case that proves value fastest? Which user flow matters so much that everything else should bend around it? Which feature requests are real signal, and which ones are just plausible distractions?
+
+In AI products, the generic version is always tempting. Build the framework. Support every workflow. Make the platform. Keep the surface area open.
+
+But early value usually comes from the opposite move: choose the narrow workflow where the user has acute pain, define the eval that proves the system is useful, and say no to feature requests that do not improve that loop.
+
+You only really understand this after building. Before you build, every request sounds reasonable. After you build, you start to feel which request will clarify the product and which one will turn it into a shapeless platform.
+
 Taste is the ability to feel those choices before they become obvious.
 
 **中文：**
@@ -355,6 +367,18 @@ Taste 藏在输出背后的决定里。
 
 什么时候应该让用户 steering？
 
+哪个 eval 应该先做？
+
+这听起来像技术问题，但很多时候是 taste 问题。
+
+弱一点的团队会先做 platform。更强的团队会先问：哪个 starter use case 能最快证明价值？哪个 user flow 重要到值得让其他东西围着它让路？哪些 feature request 是真实信号，哪些只是听起来合理的干扰？
+
+AI 产品里，generic version 永远很诱人。做 framework。支持所有 workflow。搭 platform。保持足够开放。
+
+但早期价值往往来自相反的动作：选中那个用户痛感最强的窄 workflow，定义能证明系统有用的 eval，然后对不增强这个 loop 的 feature request 说 no。
+
+这件事要真正做过之后才会懂。没做之前，每个 request 都听起来合理。做过之后，你会开始感觉到，哪个 request 会让产品更清楚，哪个 request 会把它拖成一个没有形状的平台。
+
 Taste 是在这些选择变得显而易见之前，先感知它们的能力。
 
 ---
@@ -371,6 +395,16 @@ Find role models.
 Not abstract heroes. Specific people whose work you can inspect. A founder who writes sharp strategy. A designer who makes interfaces feel inevitable. An engineer who simplifies systems without making them weak. A product leader who can cut scope without killing ambition.
 
 Then mimic them.
+
+I have been lucky to work with a few very strong engineering leaders.
+
+The learning did not start as a clean framework. It started as mimicry.
+
+At first I copied how they spoke. The way they summarized a messy situation. The way they pushed back without making the room smaller. The way they turned a vague concern into a concrete next step.
+
+Then I started copying their work habits. How they prepared for hard conversations. How they decided what deserved urgency. How they communicated uncertainty without sounding lost. How they navigated through the ambiguous without pretending the ambiguity was gone.
+
+Only later did I realize I was not just copying style. I was borrowing a decision system.
 
 At first, this may feel embarrassing.
 
@@ -397,6 +431,16 @@ With enough contact with reality, it becomes your own judgment.
 不是抽象偶像。是那些你能检查其作品的人。一个 strategy 写得很锋利的 founder。一个能把界面做得像“本来就该这样”的 designer。一个能简化系统但不削弱系统的 engineer。一个能砍 scope 但不砍 ambition 的 product leader。
 
 然后模仿他们。
+
+我很幸运，和一些很强的 engineering leader 一起工作过。
+
+学习一开始不是一个干净的方法论。它更像 mimicry。
+
+最开始模仿的是口语表达。他们怎么总结一个混乱局面。怎么 push back，但不让房间里的空气变小。怎么把一个模糊担忧变成一个具体 next step。
+
+后来开始模仿工作习惯。他们怎么准备困难对话。怎么判断什么事情真的 urgent。怎么在不确定时沟通，但又不显得迷失。怎么 navigate through the ambiguous，同时不假装 ambiguity 已经消失。
+
+再后来才意识到，我模仿的不是风格。我是在借用一套 decision system。
 
 一开始可能会很尴尬。
 
