@@ -58,7 +58,7 @@ npm run test:selenium
 
 ### Deployment to GitHub Pages
 Push to `master` to trigger the GitHub Actions workflow in `.github/workflows/deploy.yml`.
-The workflow runs lint, unit tests, builds the Vite app, and deploys `dist` to GitHub Pages.
+The workflow runs lint, unit tests, builds the Vite app, and deploys `dist` to https://shawn-new.github.io.
 
 ## 🔒 Security & Privacy
 This is a static-only SPA. It contains no server-side logic, secrets, or tracking. Content is pre-rendered for maximum performance and security.
