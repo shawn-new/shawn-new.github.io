@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import GithubSlugger from 'github-slugger';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
@@ -124,13 +125,13 @@ function App() {
 
   const getTOC = (filteredMd: string) => {
     const lines = filteredMd.split('\n');
+    const slugger = new GithubSlugger();
     return lines
       .filter(l => l.startsWith('## ') || l.startsWith('### '))
       .map(l => {
         const level = l.startsWith('### ') ? 3 : 2;
         const text = l.replace(/^###?\s+/, '').trim();
-        // Simple slugify logic to match rehype-slug
-        const slug = text.toLowerCase().replace(/[^\w\u4e00-\u9fa5]+/g, '-').replace(/^-+|-+$/g, '');
+        const slug = slugger.slug(text);
         return { level, text, slug };
       });
   };

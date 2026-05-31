@@ -87,6 +87,37 @@ test('TOC: clicking item scrolls to correct heading instantly', async ({ page })
   expect(box!.y).toBeLessThan(200);
 });
 
+test('TOC: Chinese headings with punctuation scroll to their matching sections', async ({ page }) => {
+  await page.goto('/?locale=cn#article6-winning-with-taste-in-ai-era');
+  await expect(page.locator('.toc-sidebar')).toBeVisible();
+
+  const targetLabels = [
+    '2. 去体验最前沿的产品，不要只读二手总结',
+    '4. 学习决定，不只是学习结果',
+    '5. 建立 Role Model，然后模仿他们',
+    '6. 反对意见：Taste 可能变成 Vibes',
+  ];
+
+  for (const label of targetLabels) {
+    const link = page.locator('.toc-item a', { hasText: label });
+    await link.click();
+
+    const href = await link.getAttribute('href');
+    const targetId = href?.replace(/^#/, '');
+    expect(targetId).toBeTruthy();
+
+    const headingTop = await page.evaluate((id) => {
+      const heading = document.getElementById(id);
+      return heading ? heading.getBoundingClientRect().top : null;
+    }, targetId);
+
+    expect(headingTop).not.toBeNull();
+    expect(headingTop!).toBeGreaterThanOrEqual(100);
+    expect(headingTop!).toBeLessThanOrEqual(180);
+    await expect(page.locator(`.toc-item.active a[href="${href}"]`)).toBeVisible();
+  }
+});
+
 // ─── 5. TOC active highlight ────────────────────────────────────────────────
 
 test('TOC: active item updates as user scrolls', async ({ page }) => {
