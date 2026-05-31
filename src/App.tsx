@@ -5,6 +5,8 @@ import rehypeSlug from 'rehype-slug';
 import { articles, type Article } from './data/articles';
 import './styles/App.css';
 
+const showLocalMetadata = import.meta.env.DEV;
+
 const getArticleTimestamp = (article: Article) => {
   const timestamp = Date.parse(article.date);
   return Number.isNaN(timestamp) ? 0 : timestamp;
@@ -142,7 +144,7 @@ function App() {
   };
 
   const renderDraftTag = (article: Article) =>
-    article.release === 'draft' ? <span className="draft-tag">Draft</span> : null;
+    showLocalMetadata && article.release === 'draft' ? <span className="draft-tag">Draft</span> : null;
 
   const toggleLocale = () => {
     const nextLocale = locale === 'cn' ? 'en' : 'cn';
@@ -163,10 +165,12 @@ function App() {
       <div className="article-number">0{index + 1}</div>
       <div className="article-info">
         <h2>{locale === 'cn' ? article.titleZh : article.titleEn}</h2>
-        <div className="card-meta">
-          {renderDraftTag(article)}
-          <span>{article.date}</span> • <span>{article.keywords.slice(0, 3).join(', ')}</span>
-        </div>
+        {showLocalMetadata && (
+          <div className="card-meta">
+            {renderDraftTag(article)}
+            <span>{article.date}</span> • <span>{article.keywords.slice(0, 3).join(', ')}</span>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -213,14 +217,16 @@ function App() {
               <span className="back-link" onClick={() => navigateTo(null)}>
                 ← {locale === 'cn' ? '返回目录' : 'Back to Index'}
               </span>
-              <div className="article-metadata-shelf">
-                <div className="meta-item"><div className="meta-label">Author</div><div className="meta-value">{currentArticle.author}</div></div>
-                <div className="meta-item"><div className="meta-label">Published</div><div className="meta-value">{currentArticle.date}</div></div>
-                <div className="meta-item"><div className="meta-label">Category</div><div className="meta-value">{currentArticle.category}</div></div>
-                {currentArticle.keywords.length > 0 && (
-                  <div className="meta-item"><div className="meta-label">Keywords</div><div className="meta-value">{currentArticle.keywords.join(', ')}</div></div>
-                )}
-              </div>
+              {showLocalMetadata && (
+                <div className="article-metadata-shelf">
+                  <div className="meta-item"><div className="meta-label">Author</div><div className="meta-value">{currentArticle.author}</div></div>
+                  <div className="meta-item"><div className="meta-label">Published</div><div className="meta-value">{currentArticle.date}</div></div>
+                  <div className="meta-item"><div className="meta-label">Category</div><div className="meta-value">{currentArticle.category}</div></div>
+                  {currentArticle.keywords.length > 0 && (
+                    <div className="meta-item"><div className="meta-label">Keywords</div><div className="meta-value">{currentArticle.keywords.join(', ')}</div></div>
+                  )}
+                </div>
+              )}
               <div className="article-title-block">
                 {renderDraftTag(currentArticle)}
                 <h1>{locale === 'cn' ? currentArticle.titleZh : currentArticle.titleEn}</h1>
@@ -230,7 +236,7 @@ function App() {
                   {filteredContent}
                 </ReactMarkdown>
               </div>
-              {currentArticle.history.length > 0 && (
+              {showLocalMetadata && currentArticle.history.length > 0 && (
                 <div className="edit-history-section">
                   <div className="meta-label">Edit History</div>
                   <ul>{currentArticle.history.map((item, idx) => (<li key={idx}>{item}</li>))}</ul>
