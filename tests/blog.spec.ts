@@ -92,10 +92,10 @@ test('TOC: Chinese headings with punctuation scroll to their matching sections',
   await expect(page.locator('.toc-sidebar')).toBeVisible();
 
   const targetLabels = [
-    '2. 去体验最前沿的产品，不要只读二手总结',
-    '4. 学习决定，不只是学习结果',
-    '5. 建立 Role Model，然后模仿他们',
-    '6. 反对意见：Taste 可能变成 Vibes',
+    'Taste 需要接触失败',
+    'Taste 是在真实 Workflow 里练出来的',
+    'Taste 靠研究决策变好',
+    'Taste 必须接受问责',
   ];
 
   for (const label of targetLabels) {

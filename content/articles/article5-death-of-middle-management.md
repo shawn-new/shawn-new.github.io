@@ -22,8 +22,8 @@ history:
 # The Death of Middle Management: Everyone Becomes a TLM
 # 中层管理的死亡：每个人都要成为 TLM
 
-## Context: The Translation Layer Is Shrinking
-## Context：翻译层正在变薄
+## AI Compresses The Translation Layer
+## AI 压缩了翻译层
 
 **English:**
 
@@ -39,9 +39,7 @@ AI changes the cost of that translation.
 
 A founder can now ask an AI system to turn a rough idea into a first-pass strategy. A product lead can turn notes into a roadmap. An engineer can ask for a plan, edge cases, tradeoffs, API sketches, migration steps, and test cases.
 
-The information flow from vision to strategy to execution is getting faster.
-
-That does not remove management. It kills the translator-only version of middle management.
+The information flow from vision to strategy to execution is getting faster. That does not remove management. It kills the translator-only version of middle management.
 
 **中文：**
 
@@ -57,14 +55,12 @@ AI 改变了翻译成本。
 
 创始人现在可以让 AI 把一个模糊想法变成第一版 strategy。产品负责人可以把 notes 变成 roadmap。工程师可以直接要 plan、edge cases、tradeoffs、API sketch、migration steps 和 test cases。
 
-从 vision 到 strategy 到 execution 的信息流动，正在变快。
-
-这不会消灭管理。它会杀死只做翻译的中层管理。
+从 vision 到 strategy 到 execution 的信息流动，正在变快。这不会消灭管理。它会杀死只做翻译的中层管理。
 
 ---
 
-## Thesis: Translator-Only Management Will Lose Leverage
-## Thesis：只做翻译的管理会失去杠杆
+## Translation Without Judgment Loses Leverage
+## 没有判断的翻译会失去杠杆
 
 **English:**
 
@@ -78,13 +74,7 @@ It can draft the strategy memo. It can turn the memo into a roadmap. It can turn
 
 The person in the middle now needs to add more than formatting, coordination, and status relay.
 
-They need judgment.
-
-They need taste.
-
-They need enough execution ability to know whether a roadmap is feasible.
-
-And often, they need to build part of it themselves.
+They need judgment, taste, and enough execution ability to know whether a roadmap is feasible. Often, they need to build part of it themselves.
 
 **中文：**
 
@@ -98,18 +88,12 @@ AI 压缩了这条链。
 
 站在中间的人，现在必须提供比格式化、协调、状态传递更多的价值。
 
-他需要判断力。
-
-需要 taste。
-
-需要足够的执行能力，判断 roadmap 是否可行。
-
-很多时候，他还要亲自实现其中一部分。
+他需要判断力、taste，以及足够的执行能力去判断 roadmap 是否可行。很多时候，他还要亲自实现其中一部分。
 
 ---
 
-## Point 1: Vision Can Move Closer To Execution
-## Point 1：Vision 可以更靠近 Execution
+## Vision Can Move Closer To Execution
+## Vision 可以更靠近 Execution
 
 **English:**
 
@@ -149,8 +133,8 @@ AI 让模糊想法更容易进入操作层。
 
 ---
 
-## Point 2: Scope Expands, So Management Moves Closer To Building
-## Point 2：Scope 变大，管理会更靠近 Build
+## Wider Scope Pulls Management Back Toward Building
+## 更大的 Scope 会把管理拉回 Build
 
 **English:**
 
@@ -190,8 +174,8 @@ TLM 把模糊 intent 变成可行 strategy。然后他要离 execution 足够近
 
 ---
 
-## Point 3: Big Companies Still Need Human Direction
-## Point 3：大公司仍然需要人的方向感
+## Big Companies Still Need Direction And Sponsorship
+## 大公司仍然需要方向感和 Sponsorship
 
 **English:**
 
@@ -375,8 +359,8 @@ The new one has to think and do.
 
 ---
 
-## Recap: The Manager Becomes A Builder Again
-## Recap：Manager 要重新成为 Builder
+## The Manager Becomes A Builder Again
+## Manager 要重新成为 Builder
 
 **English:**
 

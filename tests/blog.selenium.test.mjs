@@ -90,14 +90,14 @@ test('Selenium: English and Chinese locale rendering are clean and separated', a
   await driver.get(`${BASE_URL}#${ARTICLE_ID}`);
   await driver.wait(until.elementLocated(By.css('.md-content')), 10_000);
   const englishText = await driver.findElement(By.css('.md-content')).getText();
-  assert.match(englishText, /For years, engineers were sorted by stack/);
+  assert.match(englishText, /For years, we sorted engineers by stack/);
   assert.doesNotMatch(englishText, /过去很多年/);
   assert.doesNotMatch(englishText, /\\n/);
 
   await driver.get(`${BASE_URL}?locale=cn#${ARTICLE_ID}`);
   await driver.wait(until.elementLocated(By.css('.md-content')), 10_000);
   const chineseText = await driver.findElement(By.css('.md-content')).getText();
-  assert.match(chineseText, /过去很多年，工程师按技术栈分类/);
-  assert.doesNotMatch(chineseText, /For years, engineers were sorted by stack/);
+  assert.match(chineseText, /过去很多年，我们按技术栈给工程师分类/);
+  assert.doesNotMatch(chineseText, /For years, we sorted engineers by stack/);
   assert.doesNotMatch(chineseText, /\\n/);
 });

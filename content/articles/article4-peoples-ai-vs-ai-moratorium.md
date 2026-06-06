@@ -20,48 +20,38 @@ history:
 # Against the AI Moratorium: The People's AI Must Be Built
 # 反对 AI 暂停键：普通人的 AI 必须被建造出来
 
-## Summary
-## 摘要
+## I Agree With The Diagnosis, Not The Pause
+## 我同意诊断，不同意暂停
 
 **English:**
 
-I agree with Bernie Sanders's warning about the power structure around AI.
+I agree with Bernie Sanders's warning about AI power.
 
-The context is his recent AI argument and policy push. Sanders warns that Big Tech and billionaires will capture AI, use it against workers, and push the costs of data centers onto communities. His answer is a moratorium on new large AI data centers until stronger safeguards exist.
-
-That is the problem this piece responds to: concentrated AI power is real, but a pause may strengthen the companies that already have power.
-
-This matters now because AI infrastructure, regulation, labor politics, and public fear are colliding at the same time. The rules written in this window may decide whether AI becomes only a corporate weapon or also a public tool.
-
-Big Tech has strong incentives to turn AI into a profit machine: replace labor, push down wages, expand surveillance, and keep productivity gains moving toward capital.
+Big Tech has every incentive to turn AI into a profit machine: replace labor, push down wages, expand surveillance, and keep productivity gains moving toward capital. Sanders is right to say that ordinary people should not be asked to absorb the costs while billionaires capture the gains.
 
 But I reject his main prescription.
 
-Pausing AI infrastructure sounds like protection for ordinary people. In practice, it may protect the incumbents. What we need to build is AI that ordinary people can use, audit, and aim back at platforms.
+Sanders's answer is a moratorium on new large AI data centers until stronger safeguards exist. That sounds like protection for ordinary people. In practice, it may protect the incumbents. The companies that already have compute, cloud platforms, models, capital, and lobbyists can survive scarcity. Later entrants cannot.
 
-Safety has to mean more than slowing down. It has to distribute power.
+That is why this debate matters now. AI infrastructure, regulation, labor politics, and public fear are colliding in the same window. The rules written here may decide whether AI becomes only a corporate weapon or also a public tool.
 
-The response has four steps: explain Sanders's claim, show why a pause can freeze monopoly, argue that ordinary people need AI too, and define what people-first AI should do.
+Safety has to mean more than slowing down. It has to distribute power. We need AI that ordinary people can use, audit, and aim back at platforms.
 
 **中文：**
 
 我同意 Bernie Sanders 对 AI 权力结构的警告。
 
-背景是他最近关于 AI 的视频和政策主张。Sanders 警告，Big Tech 和亿万富翁会控制 AI，用它伤害工人，并把数据中心的成本推给社区。他的答案是暂停新的大型 AI 数据中心，直到更强的安全保护到位。
-
-这篇文章回应的问题是：AI 权力集中确实危险，但暂停建设可能强化已经有权力的公司。
-
-为什么现在要讲：AI 基础设施、监管、劳工政治和公众恐惧正在同一时间撞在一起。这个窗口写下的规则，可能决定 AI 只会成为企业武器，还是也能成为公共工具。
-
-Big Tech 有很强的激励把 AI 变成利润机器：替代劳动，压低工资，扩大监控，并把生产率收益继续集中到资本手里。
+Big Tech 有很强的激励把 AI 变成利润机器：替代劳动，压低工资，扩大监控，并把生产率收益继续集中到资本手里。Sanders 说普通人不该承担成本、让亿万富翁拿走收益，这个判断是对的。
 
 但我不同意他的主要处方。
 
-暂停 AI 基础设施建设，听起来像保护普通人。实际可能保护巨头。真正需要建设的，是普通人能使用、能审计、能对抗平台的 AI。
+Sanders 的答案是暂停新的大型 AI 数据中心，直到更强的保护到位。听起来像保护普通人，实际可能保护巨头。已经拥有算力、云平台、模型、资本和游说能力的公司，可以熬过稀缺。后来者不行。
 
-安全不该停在减速上。安全要靠权力分散。
+这就是为什么现在要讨论。AI 基础设施、监管、劳工政治和公众恐惧正在同一个窗口撞在一起。这个窗口写下的规则，可能决定 AI 只会成为企业武器，还是也能成为公共工具。
 
-这篇回应分四步：先讲清 Sanders 的观点，再说明暂停为什么可能冻结垄断，然后解释普通人也需要 AI，最后定义 people-first AI 应该做什么。
+安全不该停在减速上。安全要靠权力分散。真正需要建设的，是普通人能使用、能审计、能反过来对抗平台的 AI。
+
+---
 
 ## What Sanders Is Arguing
 ## Sanders 在说什么
@@ -333,8 +323,8 @@ Sanders 对电力、隐私、劳动替代、深伪和民主操纵的担忧，都
 
 目标很清楚：防止 AI 的能力只流向资本。减速本身不够。
 
-## Recap
-## 回到核心
+## The Safety Test Is Who Gets Power
+## 安全测试：权力给谁
 
 **English:**
 
@@ -344,25 +334,15 @@ Technology does not automatically side with ordinary people. Capital will turn e
 
 But pausing construction is not neutral. In a market where giants already lead, capital is concentrated, and infrastructure is scarce, a pause can freeze monopoly.
 
-The real choice is plain.
-
-Will AI belong only to giants, or also to ordinary people?
-
-Do we wait for big companies to restrain themselves, or build tools that can audit, check, and fight them?
-
-Does safety mean stopping, or does it mean distributing capability?
+The real choice is plain: do we wait for big companies to restrain themselves, or do we build tools that can audit, check, and fight them?
 
 I choose the latter.
 
-AI will become power.
-
-Ordinary people should demand more than a slower arrival of power. They should demand some of that power for themselves.
+AI will become power. Ordinary people should demand more than a slower arrival of power. They should demand some of that power for themselves.
 
 That is the question Sanders's argument leaves behind.
 
-The hard question is not whether we need AI safety. We do.
-
-The hard question is safety for whom, from whom, and with what power on the other side.
+The hard question is not whether we need AI safety. We do. The hard question is safety for whom, from whom, and with what counter-power on the other side.
 
 If safety only means making ordinary people wait, it may leave them dependent on the same institutions that already control the tools.
 
@@ -370,9 +350,9 @@ If safety means giving people ways to inspect, contest, and redirect AI systems,
 
 So the next time someone says "AI safety," ask what kind of safety they mean.
 
-Safety that protects people from AI.
+Safety that only protects people from AI is incomplete.
 
-Or safety that gives people enough power to protect themselves.
+Safety that gives people enough power to protect themselves is democratic capacity.
 
 **中文：**
 
@@ -382,25 +362,15 @@ Sanders 的警告值得听。
 
 但暂停建设带有方向。在一个巨头领先、资本集中、基础设施稀缺的市场里，暂停很可能冻结垄断。
 
-真正的选择很朴素。
-
-AI 只给巨头用，还是也给普通人用？
-
-我们等待大公司自我约束，还是建造能审计、制衡、反击大公司的工具？
-
-安全意味着停止，还是意味着把能力分散到更多人手里？
+真正的选择很朴素：我们等待大公司自我约束，还是建造能审计、制衡、反击它们的工具？
 
 我选择后者。
 
-AI 会成为权力。
-
-普通人不该只要求权力慢一点到来。普通人应该要求自己也拥有它。
+AI 会成为权力。普通人不该只要求权力慢一点到来。普通人应该要求自己也拥有它。
 
 这才是 Sanders 的论点最后留下的问题。
 
-真正难的问题不是我们要不要 AI safety。我们当然需要。
-
-真正难的问题是：谁的 safety？防谁？另一边又给普通人留下什么能力？
+真正难的问题不是我们要不要 AI safety。我们当然需要。真正难的问题是：谁的 safety？防谁？另一边又给普通人留下什么反制能力？
 
 如果 safety 只是让普通人等待，它可能只是让普通人继续依赖那些已经控制工具的机构。
 
@@ -408,9 +378,9 @@ AI 会成为权力。
 
 所以下一次有人说 AI safety 时，真正该追问的是：他说的是哪一种 safety？
 
-是保护人们不被 AI 伤害的 safety。
+只保护人们不被 AI 伤害的 safety，是不完整的。
 
-还是让人们拥有足够能力保护自己的 safety。
+让人们拥有足够能力保护自己的 safety，才是一种民主能力。
 
 ## References
 
